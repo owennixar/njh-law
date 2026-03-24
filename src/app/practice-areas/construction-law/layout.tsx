@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dallas Construction Attorney | Nixon Jach Hubbard | Construction Law Lawyers",
+  description:
+    "Dallas construction attorney with 30+ years handling mechanic\u2019s lien claims, contract disputes, delay claims & project litigation. Chambers USA and Super Lawyers.",
+  openGraph: {
+    title: "Dallas Construction Attorney | Nixon Jach Hubbard",
+    description:
+      "Construction law attorneys in Dallas handling lien claims, delay disputes, and contract litigation across Texas.",
+  },
+};
+
+export default function ConstructionLawLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
+}

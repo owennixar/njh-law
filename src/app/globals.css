@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* — Color Palette — */
+  /* Navy */
+  --color-navy-950: #0a0f1a;
+  --color-navy-900: #0f1729;
+  --color-navy-800: #162038;
+  --color-navy-700: #1e2d4d;
+  --color-navy-600: #283d66;
+
+  /* Charcoal */
+  --color-charcoal-950: #111318;
+  --color-charcoal-900: #1a1d24;
+  --color-charcoal-800: #24282f;
+  --color-charcoal-700: #2e333c;
+  --color-charcoal-600: #3a4049;
+  --color-charcoal-500: #4a515c;
+  --color-charcoal-400: #6b7280;
+  --color-charcoal-300: #9ca3af;
+  --color-charcoal-200: #d1d5db;
+  --color-charcoal-100: #f3f4f6;
+  --color-charcoal-50: #f9fafb;
+
+  /* Gold */
+  --color-gold-600: #92750a;
+  --color-gold-500: #b8960d;
+  --color-gold-400: #d4ad12;
+  --color-gold-300: #e9c53a;
+  --color-gold-200: #f0d86b;
+  --color-gold-100: #faf1c8;
+
+  /* Semantic */
+  --color-background: #ffffff;
+  --color-foreground: var(--color-navy-900);
+
+  /* — Fonts — */
+  --font-heading: var(--font-playfair);
+  --font-body: var(--font-dm-sans);
+  --font-sans: var(--font-dm-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Ensure touch targets are at least 44px on mobile */
+@media (pointer: coarse) {
+  a, button {
+    min-height: 44px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), Georgia, serif;
 }

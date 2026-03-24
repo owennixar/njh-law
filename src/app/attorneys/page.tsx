@@ -1,0 +1,149 @@
+"use client";
+
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+function FadeIn({
+  children,
+  className,
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.6, ease: "easeOut", delay }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+const attorneys = [
+  {
+    name: "Michael S. Nixon",
+    title: "Partner",
+    slug: "michael-nixon",
+    focus: "Construction Law & Real Estate Disputes",
+    phone: "(972) 503-7000",
+    email: "mnixon@njhlaw.com",
+    recognitions:
+      "Super Lawyers 2008, 2010\u20132024 \u00b7 Best Lawyers 2019\u20132024 \u00b7 Chambers USA 2020\u20132024",
+  },
+  {
+    name: "Anthony P. Jach",
+    title: "Partner",
+    slug: "anthony-jach",
+    focus: "Commercial Real Estate, Construction & Business Litigation",
+    phone: "(972) 503-7000",
+    email: "tjach@njhlaw.com",
+    recognitions: "",
+  },
+  {
+    name: "Curtis Hubbard",
+    title: "Partner",
+    slug: "curtis-hubbard",
+    focus: "Business Litigation & Commercial Transactions",
+    phone: "(972) 503-7000",
+    email: "chubbard@njhlaw.com",
+    recognitions: "",
+  },
+  {
+    name: "Jeffery H. Rusthoven",
+    title: "Attorney",
+    slug: "jeffery-rusthoven",
+    focus: "Construction Law & Commercial Real Estate",
+    phone: "(972) 503-7000",
+    email: "jrusthoven@njhlaw.com",
+    recognitions: "",
+  },
+  {
+    name: "Anthony R. Alvarado",
+    title: "Attorney",
+    slug: "anthony-alvarado",
+    focus: "Business Litigation & Corporate Transactions",
+    phone: "(972) 503-7000",
+    email: "aalvarado@njhlaw.com",
+    recognitions: "",
+  },
+];
+
+export default function AttorneysPage() {
+  return (
+    <>
+      <section className="bg-navy-950 py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              Our Attorneys
+            </h1>
+            <p className="mt-4 max-w-xl text-lg text-charcoal-300">
+              Five attorneys focused on construction law, commercial real estate,
+              business litigation, and corporate transactions in Dallas and
+              across Texas.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          {/* Asymmetric grid: lead partner wider */}
+          <div className="grid gap-8 md:grid-cols-12">
+            {attorneys.map((attorney, i) => {
+              const span =
+                i === 0
+                  ? "md:col-span-6"
+                  : i < 3
+                  ? "md:col-span-6"
+                  : "md:col-span-4";
+              return (
+                <FadeIn key={attorney.slug} delay={i * 0.08} className={span}>
+                  <Link
+                    href={`/attorneys/${attorney.slug}`}
+                    className="group block h-full rounded-lg border border-charcoal-200 transition-colors hover:border-gold-400"
+                  >
+                    {/* Photo placeholder */}
+                    <div
+                      className={`bg-charcoal-100 ${
+                        i === 0 ? "aspect-[3/4]" : "aspect-[4/5]"
+                      } rounded-t-lg`}
+                      role="img"
+                      aria-label={`Professional headshot of ${attorney.name}, ${attorney.focus} attorney in Dallas`}
+                    />
+                    <div className="p-6">
+                      <h2 className="font-heading text-lg font-bold text-navy-900">
+                        {attorney.name}
+                      </h2>
+                      <p className="text-sm text-charcoal-500">
+                        {attorney.title}
+                      </p>
+                      <p className="mt-2 text-sm font-medium text-charcoal-600">
+                        {attorney.focus}
+                      </p>
+                      <div className="mt-3 space-y-1 text-xs text-charcoal-400">
+                        <p>{attorney.phone}</p>
+                        <p>{attorney.email}</p>
+                      </div>
+                      {attorney.recognitions && (
+                        <p className="mt-3 text-xs leading-relaxed text-gold-500">
+                          {attorney.recognitions}
+                        </p>
+                      )}
+                    </div>
+                  </Link>
+                </FadeIn>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
