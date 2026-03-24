@@ -96,8 +96,17 @@ export default function HomePage() {
       {/* SECTION 1 — Hero                                             */}
       {/* ============================================================ */}
       <section className="relative overflow-hidden bg-navy-950 py-16 sm:py-28 lg:py-40">
-        {/* Gradient overlay simulating dark left-side treatment */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/95 to-navy-900/70" />
+        {/* Dallas skyline background */}
+        <Image
+          src="/images/dallas-skyline.jpg"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+          quality={80}
+        />
+        {/* Dark gradient overlay from left — keeps text readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-950/40" />
 
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">

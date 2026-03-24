@@ -48,9 +48,9 @@ export default function Header() {
           <Image
             src="/images/NJH_LAW_logo.gif"
             alt="Nixon Jach Hubbard - Attorneys at Law"
-            width={160}
-            height={52}
-            className="h-12 w-auto sm:h-14"
+            width={240}
+            height={80}
+            className="h-14 w-auto mix-blend-multiply sm:h-[72px]"
             priority
           />
         </Link>

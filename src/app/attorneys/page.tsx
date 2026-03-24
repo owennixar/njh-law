@@ -100,61 +100,55 @@ export default function AttorneysPage() {
 
       <section className="bg-white py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6">
-          {/* Asymmetric grid: lead partner wider */}
-          <div className="grid gap-8 md:grid-cols-12">
-            {attorneys.map((attorney, i) => {
-              const span =
-                i === 0
-                  ? "md:col-span-6"
-                  : i < 3
-                  ? "md:col-span-6"
-                  : "md:col-span-4";
-              return (
-                <FadeIn key={attorney.slug} delay={i * 0.08} className={span}>
-                  <Link
-                    href={`/attorneys/${attorney.slug}`}
-                    className="group block h-full rounded-lg border border-charcoal-200 transition-colors hover:border-navy-600"
-                  >
-                    {/* Attorney photo */}
-                    <div className={`relative overflow-hidden ${i === 0 ? "aspect-[3/4]" : "aspect-[4/5]"} rounded-t-lg bg-charcoal-100`}>
-                      {attorney.photo ? (
-                        <Image
-                          src={attorney.photo}
-                          alt={`Professional headshot of ${attorney.name}, ${attorney.focus} attorney in Dallas`}
-                          fill
-                          className="object-cover"
-                          sizes={i < 2 ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
-                        />
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-navy-800">
-                          <span className="font-heading text-4xl font-bold text-white/60">AA</span>
-                        </div>
-                      )}
-                    </div>
-                    <div className="p-6">
-                      <h2 className="font-heading text-lg font-bold text-navy-900">
-                        {attorney.name}
-                      </h2>
-                      <p className="text-sm text-charcoal-500">
-                        {attorney.title}
-                      </p>
-                      <p className="mt-2 text-sm font-medium text-charcoal-600">
-                        {attorney.focus}
-                      </p>
-                      <div className="mt-3 space-y-1 text-xs text-charcoal-400">
-                        <p>{attorney.phone}</p>
-                        <p>{attorney.email}</p>
+          {/* Uniform grid: 3 cols for partners, then 2 remaining below */}
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {attorneys.map((attorney, i) => (
+              <FadeIn key={attorney.slug} delay={i * 0.08}>
+                <Link
+                  href={`/attorneys/${attorney.slug}`}
+                  className="group block h-full rounded-lg border border-charcoal-200 transition-colors hover:border-navy-600"
+                >
+                  {/* Attorney photo — consistent 3:4 portrait crop */}
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-t-lg bg-charcoal-100">
+                    {attorney.photo ? (
+                      <Image
+                        src={attorney.photo}
+                        alt={`Professional headshot of ${attorney.name}, ${attorney.focus} attorney in Dallas`}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center bg-navy-800">
+                        <span className="font-heading text-5xl font-bold text-white/60">
+                          {attorney.name.split(" ").map(n => n[0]).join("")}
+                        </span>
                       </div>
-                      {attorney.recognitions && (
-                        <p className="mt-3 text-xs leading-relaxed text-navy-600">
-                          {attorney.recognitions}
-                        </p>
-                      )}
+                    )}
+                  </div>
+                  <div className="p-6">
+                    <h2 className="font-heading text-lg font-bold text-navy-900">
+                      {attorney.name}
+                    </h2>
+                    <p className="text-sm text-charcoal-500">
+                      {attorney.title}
+                    </p>
+                    <p className="mt-2 text-sm font-medium text-charcoal-600">
+                      {attorney.focus}
+                    </p>
+                    <div className="mt-3 space-y-1 text-xs text-charcoal-400">
+                      <p>{attorney.phone}</p>
+                      <p>{attorney.email}</p>
                     </div>
-                  </Link>
-                </FadeIn>
-              );
-            })}
+                    {attorney.recognitions && (
+                      <p className="mt-3 text-xs leading-relaxed text-navy-600">
+                        {attorney.recognitions}
+                      </p>
+                    )}
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>

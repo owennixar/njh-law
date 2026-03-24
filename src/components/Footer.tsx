@@ -41,9 +41,9 @@ export default function Footer() {
               <Image
                 src="/images/NJH_LAW_logo.gif"
                 alt="Nixon Jach Hubbard - Attorneys at Law"
-                width={140}
-                height={46}
-                className="h-11 w-auto brightness-0 invert"
+                width={200}
+                height={66}
+                className="h-16 w-auto brightness-0 invert sm:h-[72px]"
               />
             </Link>
             <address className="mt-4 space-y-1 text-sm not-italic leading-relaxed">
