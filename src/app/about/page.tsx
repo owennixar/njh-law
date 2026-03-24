@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 function FadeIn({
@@ -28,19 +29,18 @@ function FadeIn({
 export default function AboutPage() {
   return (
     <>
-      {/* ============================================================ */}
-      {/* HERO                                                         */}
-      {/* ============================================================ */}
-      <section className="bg-navy-950 py-24 lg:py-36">
+      {/* HERO */}
+      <section className="bg-navy-950 py-28 lg:py-40">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
+            <div className="divider-accent mb-8" />
             <h1 className="max-w-3xl font-heading text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
               A Dallas law firm built for one purpose: the businesses that
               build, invest in, and operate commercial projects in Texas
             </h1>
           </FadeIn>
           <FadeIn delay={0.1}>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-charcoal-300">
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-charcoal-300">
               Nixon Jach Hubbard is not a general practice firm. Every attorney,
               every practice area, and every client relationship connects back
               to the same industries: construction, commercial real estate,
@@ -50,10 +50,48 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* OUR STORY                                                    */}
-      {/* ============================================================ */}
-      <section className="bg-white py-24 lg:py-32">
+      {/* FOUNDING PARTNER QUOTE */}
+      <section className="bg-charcoal-50 py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <div className="grid items-center gap-12 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/mike_nixon.avif"
+                    alt="Mike Nixon, Founding Partner of Nixon Jach Hubbard"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+              </div>
+              <div className="lg:col-span-8">
+                <div className="divider-accent mb-8" />
+                <blockquote className="font-heading text-2xl font-bold leading-snug tracking-tight text-navy-900 sm:text-3xl">
+                  &ldquo;The construction industry runs on relationships and
+                  trust. We earn both by knowing the business as well as we
+                  know the law. When a GC calls about a $5M lien dispute,
+                  we do not start by asking what a change order is — we start
+                  by asking which trade is holding up the schedule.&rdquo;
+                </blockquote>
+                <div className="mt-8">
+                  <p className="text-base font-semibold text-navy-900">
+                    Mike Nixon
+                  </p>
+                  <p className="mt-1 text-sm text-charcoal-500">
+                    Founding Partner &middot; Board Certified, Civil Trial Law
+                    &middot; Super Lawyers 2008&ndash;2024
+                  </p>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* OUR STORY */}
+      <section className="bg-white py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid gap-16 lg:grid-cols-12">
             <FadeIn className="lg:col-span-7">
@@ -61,7 +99,7 @@ export default function AboutPage() {
                 Founded in Dallas. Specialized from day one.
               </h2>
 
-              <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
+              <p className="mt-8 text-sm leading-relaxed text-charcoal-600">
                 <strong>The firm was built on a simple premise:</strong>{" "}
                 construction companies, developers, and commercial property
                 owners deserve attorneys who understand their industry — not
@@ -70,7 +108,7 @@ export default function AboutPage() {
                 decision, every practice area, and every client we take on.
               </p>
 
-              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+              <p className="mt-5 text-sm leading-relaxed text-charcoal-600">
                 <strong>Five attorneys work across four practice areas</strong>{" "}
                 — construction law, commercial real estate, business
                 litigation, and corporate transactions. The team is small by
@@ -80,7 +118,7 @@ export default function AboutPage() {
                 and the attorney doing the work.
               </p>
 
-              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+              <p className="mt-5 text-sm leading-relaxed text-charcoal-600">
                 <strong>The firm operates from International Plaza III</strong>{" "}
                 on Dallas Parkway, in the heart of the North Dallas commercial
                 corridor. Clients include general contractors, subcontractors,
@@ -91,11 +129,11 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={0.15} className="lg:col-span-5">
-              <div className="rounded-lg border border-charcoal-200 bg-charcoal-50 p-8">
+              <div className="rounded-lg border border-charcoal-200 bg-charcoal-50 p-10">
                 <p className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
                   What specialization means in practice
                 </p>
-                <ul className="mt-4 space-y-4 text-sm text-charcoal-600">
+                <ul className="mt-6 space-y-5 text-sm text-charcoal-600">
                   <li>
                     <strong>We turn down cases</strong> outside our core areas.
                     Personal injury, family law, criminal defense — those
@@ -119,10 +157,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* OUR APPROACH                                                 */}
-      {/* ============================================================ */}
-      <section className="bg-charcoal-50 py-24 lg:py-32">
+      {/* OUR APPROACH */}
+      <section className="bg-charcoal-50 py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <h2 className="font-heading text-3xl font-bold tracking-tight text-navy-900">
@@ -130,14 +166,14 @@ export default function AboutPage() {
             </h2>
           </FadeIn>
 
-          <div className="mt-14 grid gap-10 md:grid-cols-3">
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
             <FadeIn>
-              <div className="rounded-lg border border-charcoal-200 bg-white p-8">
+              <div className="card-hover rounded-lg border border-charcoal-200 bg-white p-10">
                 <p className="text-4xl font-bold text-charcoal-200">01</p>
-                <h3 className="mt-3 font-heading text-lg font-bold text-navy-900">
+                <h3 className="mt-4 font-heading text-lg font-bold text-navy-900">
                   Proactive contract review
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal-600">
+                <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
                   Most construction disputes trace back to a contract clause
                   nobody flagged before work started. We review contracts
                   before you sign — identifying pay-if-paid traps, indemnity
@@ -148,12 +184,12 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={0.1}>
-              <div className="rounded-lg border border-charcoal-200 bg-white p-8">
+              <div className="card-hover rounded-lg border border-charcoal-200 bg-white p-10">
                 <p className="text-4xl font-bold text-charcoal-200">02</p>
-                <h3 className="mt-3 font-heading text-lg font-bold text-navy-900">
+                <h3 className="mt-4 font-heading text-lg font-bold text-navy-900">
                   Both sides of the table
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal-600">
+                <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
                   We represent general contractors, subcontractors, suppliers,
                   developers, and property owners. That range is rare — and
                   valuable. We already know what the other side will argue,
@@ -164,12 +200,12 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="rounded-lg border border-charcoal-200 bg-white p-8">
+              <div className="card-hover rounded-lg border border-charcoal-200 bg-white p-10">
                 <p className="text-4xl font-bold text-charcoal-200">03</p>
-                <h3 className="mt-3 font-heading text-lg font-bold text-navy-900">
+                <h3 className="mt-4 font-heading text-lg font-bold text-navy-900">
                   Business-minded risk assessment
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal-600">
+                <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
                   Legal advice that ignores project timelines, cash flow, and
                   business relationships is worthless. We factor in the real
                   cost of disruption before recommending any path. Sometimes
@@ -182,18 +218,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* BY THE NUMBERS                                               */}
-      {/* ============================================================ */}
-      <section className="bg-navy-950 py-24 lg:py-32">
+      {/* BY THE NUMBERS */}
+      <section className="bg-navy-950 py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
+            <div className="divider-accent mb-6" />
             <h2 className="font-heading text-3xl font-bold tracking-tight text-white">
               The firm by the numbers
             </h2>
           </FadeIn>
 
-          <div className="mt-14 grid gap-px overflow-hidden rounded-lg border border-navy-800 bg-navy-800 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-16 grid gap-px overflow-hidden rounded-lg border border-navy-800 bg-navy-800 sm:grid-cols-2 lg:grid-cols-5">
             {[
               { value: "35+", label: "Years of combined construction law experience" },
               { value: "5", label: "Attorneys focused on four practice areas" },
@@ -202,11 +237,11 @@ export default function AboutPage() {
               { value: "4", label: "Federal district courts of Texas \u2014 admitted to all" },
             ].map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 0.06}>
-                <div className="bg-navy-900 p-8 text-center">
+                <div className="bg-navy-900 p-10 text-center">
                   <p className="font-heading text-4xl font-bold text-white">
                     {stat.value}
                   </p>
-                  <p className="mt-2 text-xs leading-relaxed text-charcoal-400">
+                  <p className="mt-3 text-xs leading-relaxed text-charcoal-400">
                     {stat.label}
                   </p>
                 </div>
@@ -216,19 +251,17 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ============================================================ */}
-      {/* CTA BAND                                                     */}
-      {/* ============================================================ */}
+      {/* CTA BAND */}
       <section className="bg-navy-900 py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between">
+            <div className="flex flex-col items-start gap-12 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-xl">
-                <h2 className="font-heading text-3xl font-bold tracking-tight text-white">
+                <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
                   Tell us about your project. We&apos;ll tell you where you
                   stand.
                 </h2>
-                <p className="mt-4 text-charcoal-300">
+                <p className="mt-5 text-charcoal-300">
                   Direct access to experienced partners. No obligation.
                   We respond within one business day.
                 </p>
@@ -236,7 +269,7 @@ export default function AboutPage() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Schedule a Consultation
                 </Link>

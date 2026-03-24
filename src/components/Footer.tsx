@@ -1,101 +1,102 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const currentYear = new Date().getFullYear();
 
-const navColumns = [
-  {
-    title: "Firm",
-    links: [
-      { href: "/about", label: "About the Firm" },
-      { href: "/attorneys", label: "Our Attorneys" },
-      { href: "/contact", label: "Contact" },
-    ],
-  },
-  {
-    title: "Practice Areas",
-    links: [
-      { href: "/practice-areas/construction-law", label: "Construction Law" },
-      { href: "/practice-areas/commercial-real-estate", label: "Commercial Real Estate" },
-      { href: "/practice-areas/business-litigation", label: "Business Litigation" },
-      { href: "/practice-areas/corporate-transactions", label: "Corporate Transactions" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { href: "/insights", label: "Insights & Articles" },
-      { href: "/contact", label: "Schedule a Consultation" },
-    ],
-  },
-];
-
 export default function Footer() {
   return (
-    <footer className="border-t border-charcoal-200 bg-navy-950 text-charcoal-300">
+    <footer className="border-t border-navy-800 bg-navy-950 text-charcoal-300">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          {/* Firm info column */}
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Firm wordmark + contact */}
           <div>
-            <Link href="/">
-              <Image
-                src="/images/NJH_LAW_logo.gif"
-                alt="Nixon Jach Hubbard - Attorneys at Law"
-                width={200}
-                height={66}
-                className="h-16 w-auto brightness-0 invert sm:h-[72px]"
-              />
+            <Link href="/" className="group inline-block">
+              <span className="wordmark block text-lg text-white">
+                Nixon Jach Hubbard
+              </span>
+              <span className="wordmark-sub mt-1 block text-[10px] text-charcoal-400">
+                Attorneys &amp; Counselors
+              </span>
             </Link>
-            <address className="mt-4 space-y-1 text-sm not-italic leading-relaxed">
-              <p>International Plaza III</p>
+            <address className="mt-6 space-y-1 text-sm not-italic leading-relaxed">
               <p>14241 Dallas Parkway, Suite 575</p>
               <p>Dallas, Texas 75254</p>
             </address>
-            <div className="mt-4 space-y-1 text-sm">
+            <div className="mt-3 space-y-1 text-sm">
               <p>
-                <span className="text-charcoal-400">Phone: </span>
                 <a href="tel:9725037000" className="transition-colors hover:text-white">
                   (972) 503-7000
                 </a>
               </p>
-              <p>
-                <span className="text-charcoal-400">Fax: </span>
-                <span>(972) 503-7001</span>
-              </p>
             </div>
           </div>
 
-          {/* Nav columns */}
-          {navColumns.map((col) => (
-            <div key={col.title}>
-              <p className="text-sm font-semibold tracking-wider text-white uppercase">
-                {col.title}
-              </p>
-              <ul className="mt-4 space-y-3">
-                {col.links.map((link) => (
-                  <li key={link.href + link.label}>
-                    <Link
-                      href={link.href}
-                      className="inline-block py-1 text-sm transition-colors hover:text-white"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Quick links */}
+          <div>
+            <p className="text-xs font-semibold tracking-wider text-white uppercase">Firm</p>
+            <ul className="mt-4 space-y-2.5">
+              {[
+                { href: "/about", label: "About" },
+                { href: "/attorneys", label: "Attorneys" },
+                { href: "/clients", label: "Clients" },
+                { href: "/insights", label: "Insights" },
+                { href: "/contact", label: "Contact" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm transition-colors hover:text-white">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Practice Areas */}
+          <div>
+            <p className="text-xs font-semibold tracking-wider text-white uppercase">Practice Areas</p>
+            <ul className="mt-4 space-y-2.5">
+              {[
+                { href: "/practice-areas/construction-law", label: "Construction Law" },
+                { href: "/practice-areas/commercial-real-estate", label: "Commercial Real Estate" },
+                { href: "/practice-areas/business-litigation", label: "Business Litigation" },
+                { href: "/practice-areas/corporate-transactions", label: "Corporate Transactions" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm transition-colors hover:text-white">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact CTA */}
+          <div>
+            <p className="text-xs font-semibold tracking-wider text-white uppercase">Get in Touch</p>
+            <p className="mt-4 text-sm leading-relaxed">
+              We respond within one business day.
+            </p>
+            <Link
+              href="/contact"
+              className="mt-4 inline-block rounded bg-gold-400 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
+            >
+              Schedule a Consultation
+            </Link>
+          </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 border-t border-navy-800 pt-8">
+        <div className="mt-14 border-t border-navy-800 pt-6">
           <p className="text-xs leading-relaxed text-charcoal-400">
             &copy; {currentYear} Nixon Jach Hubbard. All rights reserved.
           </p>
-          <p className="mt-3 text-xs leading-relaxed text-charcoal-500">
+          <p className="mt-2 text-xs leading-relaxed text-charcoal-500">
             This website is designed for general information only. The information
             presented should not be construed as formal legal advice or the
             formation of a lawyer/client relationship.
+          </p>
+          <p className="mt-2 text-xs leading-relaxed text-charcoal-500">
+            Except where specifically noted, our attorneys are not certified by
+            the Texas Board of Legal Specialization.
           </p>
         </div>
       </div>

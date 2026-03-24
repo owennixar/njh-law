@@ -4,6 +4,7 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import MobileCTA from "@/components/MobileCTA";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -105,6 +106,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <ScrollToTop />
+        <MobileCTA />
       </body>
     </html>
   );

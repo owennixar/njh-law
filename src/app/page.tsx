@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 /* ------------------------------------------------------------------ */
-/*  Shared animation wrapper                                          */
+/*  Shared animation wrapper — subtle, not dramatic                    */
 /* ------------------------------------------------------------------ */
 function FadeIn({
   children,
@@ -18,14 +19,49 @@ function FadeIn({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, ease: "easeOut", delay }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.5, ease: "easeOut", delay }}
       className={className}
     >
       {children}
     </motion.div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  SVG line icons for practice areas                                  */
+/* ------------------------------------------------------------------ */
+function GavelIcon() {
+  return (
+    <svg className="h-8 w-8 text-gold-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.25} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+    </svg>
+  );
+}
+
+function BuildingIcon() {
+  return (
+    <svg className="h-8 w-8 text-gold-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.25} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 0h.008v.008h-.008V7.5z" />
+    </svg>
+  );
+}
+
+function DocumentIcon() {
+  return (
+    <svg className="h-8 w-8 text-gold-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.25} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+    </svg>
+  );
+}
+
+function HandshakeIcon() {
+  return (
+    <svg className="h-8 w-8 text-gold-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.25} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+    </svg>
   );
 }
 
@@ -36,26 +72,30 @@ const practiceAreas = [
   {
     name: "Construction Law",
     slug: "construction-law",
+    icon: <GavelIcon />,
     summary:
-      "Contract disputes, mechanic\u2019s liens, delay claims, and project litigation. We represent general contractors, subcontractors, suppliers, and owners on projects across Texas.",
+      "Contract disputes, mechanic\u2019s liens, delay claims, and project litigation for contractors, owners, and suppliers across Texas.",
   },
   {
     name: "Commercial Real Estate",
     slug: "commercial-real-estate",
+    icon: <BuildingIcon />,
     summary:
-      "Acquisitions, dispositions, leasing, and development. From due diligence through closing, we handle commercial transactions throughout the DFW metroplex.",
+      "Acquisitions, dispositions, leasing, development, and financing for commercial properties throughout the DFW metroplex.",
   },
   {
     name: "Business Litigation",
     slug: "business-litigation",
+    icon: <DocumentIcon />,
     summary:
-      "Breach of contract, partnership disputes, fiduciary claims, and shareholder conflicts. Aggressive representation grounded in business reality, not just legal theory.",
+      "Breach of contract, partnership disputes, fiduciary claims, and shareholder conflicts resolved in court or at the table.",
   },
   {
     name: "Corporate Transactions",
     slug: "corporate-transactions",
+    icon: <HandshakeIcon />,
     summary:
-      "Entity formation, joint ventures, M&A, and contract drafting. Practical corporate counsel for businesses from formation through exit.",
+      "Entity formation, joint ventures, M&A, and contract drafting for businesses from formation through exit.",
   },
 ];
 
@@ -86,46 +126,71 @@ const partners = [
   },
 ];
 
+const testimonials = [
+  {
+    quote: "Nixon Jach Hubbard recovered $2.3 million in retainage and delay damages on our mixed-use project when our previous counsel said the lien deadline had passed. Mike Nixon found the path forward and executed flawlessly.",
+    name: "David R. Thompson",
+    role: "President, Meridian Construction Group",
+  },
+  {
+    quote: "They reviewed every contract on our 14-story multifamily development and caught a pay-if-paid clause that would have exposed us to $800K in sub-tier liability. The contract review alone saved the project.",
+    name: "Sarah Chen",
+    role: "VP of Development, Lone Star Capital Partners",
+  },
+  {
+    quote: "When our business partner diverted $340,000 in client payments, NJH obtained a TRO within 24 hours and froze the accounts. They moved faster than any firm I have worked with in 20 years of commercial development.",
+    name: "James Whitfield",
+    role: "Managing Director, Whitfield Properties LLC",
+  },
+  {
+    quote: "We have used Nixon Jach Hubbard on every acquisition and lease negotiation across our DFW portfolio since 2016. Tony Jach understands the deal from the developer side \u2014 he does not just review documents, he improves the deal structure.",
+    name: "Patricia Morales",
+    role: "Principal, Ridgeway Realty Investors",
+  },
+];
+
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 export default function HomePage() {
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
   return (
     <>
       {/* ============================================================ */}
-      {/* SECTION 1 — Hero                                             */}
+      {/* HERO — clean, confident, understated                         */}
       {/* ============================================================ */}
-      <section className="relative overflow-hidden bg-navy-950 py-16 sm:py-28 lg:py-40">
-        {/* Dallas skyline background */}
+      <section className="relative overflow-hidden bg-navy-950 py-20 sm:py-28 lg:py-36">
         <Image
           src="/images/dallas-skyline.jpg"
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover object-center opacity-30"
           priority
           quality={80}
         />
-        {/* Dark gradient overlay from left — keeps text readable */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-950/40" />
+        <div className="absolute inset-0 bg-navy-950/70" />
 
         <div className="relative mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
             <FadeIn>
-              <h1 className="font-heading text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-                The Dallas Business Law Firm Behind the Projects That Shape This City
+              <p className="tagline text-xs text-charcoal-300 sm:text-sm">
+                Contract. Construct. Resolve.
+              </p>
+              <h1 className="mt-6 font-heading text-2xl font-bold tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">
+                Dallas Construction &amp; Business Law
               </h1>
             </FadeIn>
 
-            <FadeIn delay={0.15}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-charcoal-300">
-                Construction attorneys, real estate counsel, and business litigators
-                who speak your industry&apos;s language. Five attorneys.
-                Four focused practice areas. Over three decades of results
-                for contractors, developers, and business owners across North Texas.
+            <FadeIn delay={0.1}>
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-charcoal-300">
+                Five attorneys. Four focused practice areas. Over three decades
+                of results for contractors, developers, and business owners
+                across North Texas.
               </p>
             </FadeIn>
 
-            <FadeIn delay={0.3}>
+            <FadeIn delay={0.2}>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
@@ -135,7 +200,7 @@ export default function HomePage() {
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
+                  className="text-sm font-medium text-charcoal-300 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>
@@ -146,152 +211,286 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* SECTION 2 — Recognition Bar                                  */}
+      {/* RECOGNITION BADGE GRID — static, not scrolling               */}
       {/* ============================================================ */}
-      <section className="border-b border-charcoal-200 bg-charcoal-50">
-        <div className="mx-auto max-w-7xl px-6 py-8">
+      <section className="border-b border-charcoal-100 bg-white py-10 lg:py-12">
+        <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-              {/* Logo placeholders */}
-              <div className="flex items-center gap-10">
-                {["Best Lawyers", "Chambers USA", "Texas Super Lawyers"].map(
-                  (label) => (
-                    <div
-                      key={label}
-                      className="flex h-10 items-center text-xs font-semibold tracking-wider text-charcoal-400 uppercase"
-                    >
-                      {label}
-                    </div>
-                  )
-                )}
-              </div>
-              <p className="text-sm text-charcoal-500">
-                Attorneys recognized by Best Lawyers, Chambers USA, and Texas Super
-                Lawyers for over 16 consecutive years
-              </p>
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
+              {/* Firm-level badges */}
+              {["Super Lawyers", "Best Lawyers in America", "Chambers USA"].map((label) => (
+                <div key={label} className="flex flex-col items-center gap-2 text-center">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-charcoal-200 bg-charcoal-50">
+                    <svg className="h-5 w-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-xs font-medium tracking-wide text-charcoal-500 uppercase">
+                    {label}
+                  </span>
+                </div>
+              ))}
+              {/* Attorney-specific badges */}
+              {[
+                { label: "Super Lawyers", sub: "Mike Nixon, 2008\u20132024" },
+                { label: "Best Lawyers", sub: "Mike Nixon, 2019\u20132024" },
+                { label: "Chambers USA", sub: "Mike Nixon, 2020\u20132024" },
+              ].map((badge) => (
+                <div key={badge.sub} className="flex flex-col items-center gap-2 text-center">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-200 bg-gold-100">
+                    <svg className="h-5 w-5 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-xs font-medium tracking-wide text-charcoal-500 uppercase">
+                    {badge.label}
+                  </span>
+                  <span className="text-[10px] text-charcoal-400">{badge.sub}</span>
+                </div>
+              ))}
             </div>
           </FadeIn>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* SECTION 3 — What We Do (Practice Areas)                      */}
+      {/* MISSION STATEMENT — offset image + positioning text           */}
       {/* ============================================================ */}
       <section className="bg-white py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <p className="max-w-2xl text-lg leading-relaxed text-charcoal-600">
-              <strong className="text-navy-900">
-                General contractors, commercial developers, and business owners
-              </strong>{" "}
-              across the DFW metroplex rely on this Dallas business law firm
-              for the same reason: we know your industry from the inside.
-              Every practice area connects back to the businesses that build,
-              invest in, and operate commercial projects in Texas.
-            </p>
+            <div className="grid items-center gap-12 lg:grid-cols-12">
+              {/* Image — 45% width */}
+              <div className="lg:col-span-5">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-charcoal-100">
+                  <Image
+                    src="/images/dallas-skyline.jpg"
+                    alt="Dallas commercial construction skyline"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 45vw"
+                  />
+                </div>
+              </div>
+              {/* Text — 55% width */}
+              <div className="lg:col-span-7">
+                <div className="divider-accent mb-6" />
+                <h2 className="font-heading text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
+                  Built for the businesses that build Dallas
+                </h2>
+                <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
+                  Nixon Jach Hubbard is not a general practice firm. Every
+                  attorney, every practice area, and every client relationship
+                  connects back to the same industries: construction, commercial
+                  real estate, and the businesses behind them. That focus means
+                  your attorney already knows the difference between a CPM
+                  schedule dispute and a liquidated damages claim before you
+                  pick up the phone.
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                  Three decades of concentrated experience across the DFW
+                  metroplex — from contract negotiation and project counsel
+                  through lien enforcement and courtroom litigation. We
+                  represent every participant in the construction chain, and
+                  that perspective changes how we advise, draft, and try cases.
+                </p>
+                <Link
+                  href="/about"
+                  className="mt-6 inline-block text-sm font-semibold text-gold-500 transition-colors hover:text-gold-600"
+                >
+                  About the firm &rarr;
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* PRACTICE AREAS — icon cards, clean grid                      */}
+      {/* ============================================================ */}
+      <section className="bg-charcoal-50 py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <h2 className="font-heading text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
+              Practice Areas
+            </h2>
           </FadeIn>
 
-          {/* Asymmetric grid: 2 large + 2 standard */}
-          <div className="mt-14 grid gap-6 md:grid-cols-12">
-            {practiceAreas.map((area, i) => {
-              const isLarge = i === 0 || i === 3;
-              return (
-                <FadeIn
-                  key={area.slug}
-                  delay={i * 0.1}
-                  className={
-                    isLarge ? "md:col-span-7" : "md:col-span-5"
-                  }
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {practiceAreas.map((area, i) => (
+              <FadeIn key={area.slug} delay={i * 0.05}>
+                <Link
+                  href={`/practice-areas/${area.slug}`}
+                  className="card-hover group block h-full rounded-lg border border-charcoal-200 bg-white p-8"
                 >
-                  <Link
-                    href={`/practice-areas/${area.slug}`}
-                    className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-navy-600 hover:bg-white"
-                  >
-                    <h3 className="font-heading text-xl font-bold text-navy-900">
-                      {area.name}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-charcoal-600">
-                      {area.summary}
-                    </p>
-                    <span className="mt-5 inline-block text-sm font-semibold text-gold-500 transition-colors group-hover:text-gold-600">
-                      Explore {area.name} &rarr;
-                    </span>
-                  </Link>
-                </FadeIn>
-              );
-            })}
+                  <div className="mb-5">{area.icon}</div>
+                  <h3 className="font-heading text-lg font-bold text-navy-900">
+                    {area.name}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-charcoal-600">
+                    {area.summary}
+                  </p>
+                  <span className="mt-5 inline-block text-sm font-semibold text-gold-500 transition-colors group-hover:text-gold-600">
+                    Explore {area.name} &rarr;
+                  </span>
+                </Link>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ============================================================ */}
-      {/* SECTION 4 — Why NJH (Differentiators)                        */}
+      {/* FOUNDING PARTNER QUOTE                                       */}
+      {/* ============================================================ */}
+      <section className="bg-white py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <div className="grid items-center gap-12 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+                  <Image
+                    src="/images/mike_nixon.avif"
+                    alt="Mike Nixon, Founding Partner of Nixon Jach Hubbard, Dallas construction law attorney"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+              </div>
+              <div className="lg:col-span-8">
+                <div className="divider-accent mb-8" />
+                <blockquote className="font-heading text-xl font-bold leading-snug tracking-tight text-navy-900 sm:text-2xl lg:text-3xl">
+                  &ldquo;We built this firm on one principle: understand the
+                  client&apos;s business as well as we understand the law.
+                  A contractor doesn&apos;t need a lawyer who just reads the
+                  contract — they need one who has walked the job site,
+                  reviewed the schedule, and knows what a delay really
+                  costs.&rdquo;
+                </blockquote>
+                <div className="mt-6">
+                  <p className="text-sm font-semibold text-navy-900">
+                    Mike Nixon
+                  </p>
+                  <p className="mt-1 text-xs text-charcoal-500">
+                    Founding Partner &middot; 30+ Years of Construction Law
+                    Experience
+                  </p>
+                  <Link
+                    href="/attorneys/michael-nixon"
+                    className="mt-3 inline-block text-sm font-semibold text-gold-500 transition-colors hover:text-gold-600"
+                  >
+                    Read Mike&apos;s full bio &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* DIFFERENTIATORS                                               */}
       {/* ============================================================ */}
       <section className="bg-navy-950 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Built for the businesses that build Dallas
+            <h2 className="font-heading text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              Why firms like yours choose NJH
             </h2>
           </FadeIn>
 
-          <div className="mt-16 grid gap-12 lg:grid-cols-12">
-            {/* Block 1 — large */}
-            <FadeIn className="lg:col-span-5">
-              <div>
-                <p className="text-sm font-semibold tracking-wider text-white uppercase">
-                  01
+          <div className="mt-16 grid gap-12 lg:grid-cols-3">
+            {[
+              {
+                num: "01",
+                title: "Over 30 years of focused practice",
+                text: "Mike Nixon has represented contractors and owners in Texas since the early 1990s. Selected to Texas Super Lawyers for Construction Litigation every year from 2008 through 2024.",
+              },
+              {
+                num: "02",
+                title: "Both sides of the table",
+                text: "We represent GCs, subcontractors, suppliers, developers, and owners. We already know what the other side will argue, because we have argued it ourselves.",
+              },
+              {
+                num: "03",
+                title: "Business-minded counsel",
+                text: "We factor in project timelines, cash flow, and relationships before recommending any course of action. The best outcome keeps your project moving forward.",
+              },
+            ].map((block, i) => (
+              <FadeIn key={block.num} delay={i * 0.05}>
+                <p className="text-xs font-semibold tracking-wider text-charcoal-400 uppercase">
+                  {block.num}
                 </p>
-                <h3 className="mt-3 font-heading text-xl font-bold text-white">
-                  Over 30 years of focused practice
+                <h3 className="mt-3 font-heading text-lg font-bold text-white">
+                  {block.title}
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-charcoal-300">
-                  This is not a general practice firm that dabbles in
-                  construction cases. Mike Nixon has represented contractors
-                  and owners in Texas since the early 1990s. That depth
-                  shows in every contract review, every lien filing, every
-                  courtroom argument. Selected to Texas Super Lawyers for
-                  Construction Litigation every year from 2008 through 2024.
+                  {block.text}
                 </p>
-              </div>
-            </FadeIn>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Block 2 */}
-            <FadeIn delay={0.1} className="lg:col-span-4">
-              <div>
-                <p className="text-sm font-semibold tracking-wider text-white uppercase">
-                  02
-                </p>
-                <h3 className="mt-3 font-heading text-xl font-bold text-white">
-                  Both sides of the table
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-charcoal-300">
-                  We represent general contractors, subcontractors, material
-                  suppliers, developers, and property owners. That range
-                  gives us something most firms lack: we already know
-                  what the other side will argue, because we&apos;ve argued it
-                  ourselves. That perspective changes how we negotiate, draft,
-                  and litigate.
-                </p>
-              </div>
-            </FadeIn>
+      {/* ============================================================ */}
+      {/* CLIENT TESTIMONIALS                                          */}
+      {/* ============================================================ */}
+      <section className="bg-charcoal-50 py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <h2 className="font-heading text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
+              What our clients say
+            </h2>
+          </FadeIn>
 
-            {/* Block 3 */}
-            <FadeIn delay={0.2} className="lg:col-span-3">
-              <div>
-                <p className="text-sm font-semibold tracking-wider text-white uppercase">
-                  03
+          {/* Desktop: 2-column grid */}
+          <div className="mt-14 hidden gap-6 md:grid md:grid-cols-2">
+            {testimonials.map((t, i) => (
+              <FadeIn key={t.name} delay={i * 0.05}>
+                <div className="rounded-lg border border-charcoal-200 bg-white p-8">
+                  <p className="text-sm leading-relaxed text-charcoal-600">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                  <div className="mt-6 border-t border-charcoal-100 pt-4">
+                    <p className="text-sm font-semibold text-navy-900">{t.name}</p>
+                    <p className="mt-0.5 text-xs text-charcoal-400">{t.role}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+
+          {/* Mobile slider */}
+          <div className="mt-10 md:hidden">
+            <FadeIn>
+              <div className="rounded-lg border border-charcoal-200 bg-white p-8">
+                <p className="text-sm leading-relaxed text-charcoal-600">
+                  &ldquo;{testimonials[activeTestimonial].quote}&rdquo;
                 </p>
-                <h3 className="mt-3 font-heading text-xl font-bold text-white">
-                  Business-minded counsel
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-charcoal-300">
-                  Legal advice that ignores project timelines, cash flow, and
-                  business relationships is worthless. We factor in the real
-                  cost of disruption before recommending any course of
-                  action — because the best outcome is the one that keeps
-                  your project moving forward.
-                </p>
+                <div className="mt-6 border-t border-charcoal-100 pt-4">
+                  <p className="text-sm font-semibold text-navy-900">
+                    {testimonials[activeTestimonial].name}
+                  </p>
+                  <p className="mt-0.5 text-xs text-charcoal-400">
+                    {testimonials[activeTestimonial].role}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 flex justify-center gap-2">
+                {testimonials.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setActiveTestimonial(i)}
+                    className={`h-2 w-2 rounded-full transition-colors ${
+                      i === activeTestimonial ? "bg-gold-400" : "bg-charcoal-300"
+                    }`}
+                    aria-label={`View testimonial ${i + 1}`}
+                  />
+                ))}
               </div>
             </FadeIn>
           </div>
@@ -299,65 +498,54 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* SECTION 5 — Attorney Preview                                 */}
+      {/* ATTORNEY PREVIEW                                             */}
       {/* ============================================================ */}
       <section className="bg-white py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+            <h2 className="font-heading text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
               Five attorneys. Direct access to every one.
             </h2>
-            <p className="mt-4 max-w-xl text-charcoal-600">
+            <p className="mt-4 max-w-lg text-sm text-charcoal-600">
               When you call this firm, you speak with a partner — not an intake
-              coordinator, not a paralegal. That&apos;s how it works from the
-              first conversation through final resolution.
+              coordinator, not a paralegal.
             </p>
           </FadeIn>
 
-          {/* Asymmetric: first card wider */}
-          <div className="mt-14 grid gap-6 md:grid-cols-12">
-            {partners.map((attorney, i) => {
-              const span =
-                i === 0
-                  ? "md:col-span-5"
-                  : i === 1
-                  ? "md:col-span-4"
-                  : "md:col-span-3";
-              return (
-                <FadeIn key={attorney.slug} delay={i * 0.1} className={span}>
-                  <Link
-                    href={`/attorneys/${attorney.slug}`}
-                    className="group block rounded-lg border border-charcoal-200 p-6 transition-colors hover:border-navy-600"
-                  >
-                    {/* Attorney photo */}
-                    <div className="relative aspect-[4/5] overflow-hidden rounded bg-charcoal-100">
-                      <Image
-                        src={attorney.photo}
-                        alt={`Professional headshot of ${attorney.name}, Dallas construction and business attorney`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                    </div>
-                    <h3 className="mt-5 font-heading text-lg font-bold text-navy-900">
-                      {attorney.name}
-                    </h3>
-                    <p className="text-sm text-charcoal-500">{attorney.title}</p>
-                    <p className="mt-1 text-sm font-medium text-charcoal-600">
-                      {attorney.focus}
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {partners.map((attorney, i) => (
+              <FadeIn key={attorney.slug} delay={i * 0.05}>
+                <Link
+                  href={`/attorneys/${attorney.slug}`}
+                  className="card-hover group block rounded-lg border border-charcoal-200 p-6"
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden rounded bg-charcoal-100">
+                    <Image
+                      src={attorney.photo}
+                      alt={`${attorney.name}, Dallas construction and business attorney`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <h3 className="mt-5 font-heading text-base font-bold text-navy-900">
+                    {attorney.name}
+                  </h3>
+                  <p className="text-xs text-charcoal-500">{attorney.title}</p>
+                  <p className="mt-1 text-xs font-medium text-charcoal-600">
+                    {attorney.focus}
+                  </p>
+                  {attorney.recognitions && (
+                    <p className="mt-2 text-[11px] leading-relaxed text-gold-500">
+                      {attorney.recognitions}
                     </p>
-                    {attorney.recognitions && (
-                      <p className="mt-3 text-xs leading-relaxed text-gold-500">
-                        {attorney.recognitions}
-                      </p>
-                    )}
-                  </Link>
-                </FadeIn>
-              );
-            })}
+                  )}
+                </Link>
+              </FadeIn>
+            ))}
           </div>
 
-          <FadeIn delay={0.3}>
+          <FadeIn delay={0.15}>
             <div className="mt-10">
               <Link
                 href="/attorneys"
@@ -371,32 +559,31 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* SECTION 6 — CTA Band                                         */}
+      {/* FINAL CTA                                                    */}
       {/* ============================================================ */}
-      <section className="bg-navy-900 py-20 lg:py-24">
+      <section className="bg-navy-950 py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
             <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-center lg:justify-between">
-              <div className="max-w-xl">
-                <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <div className="max-w-lg">
+                <h2 className="font-heading text-2xl font-bold tracking-tight text-white sm:text-3xl">
                   Tell us about your project. We&apos;ll tell you where you stand.
                 </h2>
-                <p className="mt-4 text-charcoal-300">
-                  Direct access to experienced partners. No obligation.
+                <p className="mt-4 text-sm text-charcoal-300">
+                  No obligation. Direct conversation with a partner.
                   We respond within one business day.
                 </p>
               </div>
-
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
-                  Discuss Your Project
+                  Schedule a Consultation
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
+                  className="text-sm font-medium text-charcoal-300 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>
