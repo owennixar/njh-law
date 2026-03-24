@@ -119,7 +119,7 @@ export default function InsightsPage() {
                   ) : (
                     <Link
                       href={`/insights/${post.slug}`}
-                      className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-gold-400 hover:bg-white"
+                      className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-navy-600 hover:bg-white"
                     >
                       <p className="text-xs font-semibold tracking-wider text-gold-500 uppercase">
                         {post.category} &middot; {post.date}

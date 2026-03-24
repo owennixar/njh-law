@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Script from "next/script";
 
@@ -65,7 +66,7 @@ export default function JefferyRusthovenPage() {
               <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Jeffery H. Rusthoven
               </h1>
-              <p className="mt-1 text-lg text-gold-400">Attorney</p>
+              <p className="mt-1 text-lg text-white">Attorney</p>
               <div className="mt-4 flex flex-wrap gap-x-8 gap-y-1 text-sm text-charcoal-300">
                 <a href="tel:9725037000" className="hover:text-white">
                   (972) 503-7000
@@ -80,20 +81,29 @@ export default function JefferyRusthovenPage() {
               <div className="mt-6 flex gap-3">
                 <Link
                   href="/practice-areas/construction-law"
-                  className="rounded border border-navy-700 px-3 py-1 text-xs text-charcoal-300 hover:border-gold-400 hover:text-gold-300"
+                  className="rounded border border-navy-700 px-3 py-1 text-xs text-charcoal-300 hover:border-navy-600 hover:text-charcoal-200"
                 >
                   Construction Law
                 </Link>
                 <Link
                   href="/practice-areas/commercial-real-estate"
-                  className="rounded border border-navy-700 px-3 py-1 text-xs text-charcoal-300 hover:border-gold-400 hover:text-gold-300"
+                  className="rounded border border-navy-700 px-3 py-1 text-xs text-charcoal-300 hover:border-navy-600 hover:text-charcoal-200"
                 >
                   Commercial Real Estate
                 </Link>
               </div>
             </FadeIn>
             <FadeIn delay={0.1} className="lg:col-span-5">
-              <div className="aspect-square max-w-xs rounded-lg bg-navy-800 lg:ml-auto" role="img" aria-label="Jeffery H. Rusthoven, Dallas construction and real estate attorney" />
+              <div className="relative aspect-square max-w-xs overflow-hidden rounded-lg lg:ml-auto">
+                <Image
+                  src="/images/jeff_rusthoven.avif"
+                  alt="Jeffery H. Rusthoven, Dallas construction and real estate attorney"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
+                />
+              </div>
             </FadeIn>
           </div>
         </div>
@@ -141,7 +151,7 @@ export default function JefferyRusthovenPage() {
               </div>
               <Link
                 href="/contact"
-                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-navy-950 hover:bg-gold-300"
+                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-white hover:bg-gold-300"
               >
                 Schedule a Consultation
               </Link>

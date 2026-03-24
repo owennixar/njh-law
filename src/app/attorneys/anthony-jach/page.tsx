@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Script from "next/script";
 
@@ -66,13 +67,22 @@ export default function AnthonyJachPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col gap-10 lg:flex-row lg:items-center">
             <FadeIn>
-              <div className="h-48 w-48 shrink-0 rounded-lg bg-navy-800 lg:h-56 lg:w-56" role="img" aria-label="Anthony P. Jach, Dallas commercial real estate attorney" />
+              <div className="relative h-48 w-48 shrink-0 overflow-hidden rounded-lg lg:h-56 lg:w-56">
+                <Image
+                  src="/images/tony_jach.avif"
+                  alt="Anthony P. Jach, Dallas commercial real estate attorney"
+                  fill
+                  className="object-cover"
+                  sizes="224px"
+                  priority
+                />
+              </div>
             </FadeIn>
             <FadeIn delay={0.1}>
               <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Anthony P. Jach
               </h1>
-              <p className="mt-1 text-lg text-gold-400">Partner</p>
+              <p className="mt-1 text-lg text-white">Partner</p>
               <div className="mt-4 flex flex-wrap gap-x-8 gap-y-1 text-sm text-charcoal-300">
                 <a href="tel:9725037000" className="hover:text-white">
                   (972) 503-7000
@@ -163,7 +173,7 @@ export default function AnthonyJachPage() {
               </div>
               <Link
                 href="/contact"
-                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-navy-950 hover:bg-gold-300"
+                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-white hover:bg-gold-300"
               >
                 Schedule a Consultation
               </Link>

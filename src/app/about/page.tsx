@@ -203,7 +203,7 @@ export default function AboutPage() {
             ].map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 0.06}>
                 <div className="bg-navy-900 p-8 text-center">
-                  <p className="font-heading text-4xl font-bold text-gold-400">
+                  <p className="font-heading text-4xl font-bold text-white">
                     {stat.value}
                   </p>
                   <p className="mt-2 text-xs leading-relaxed text-charcoal-400">
@@ -236,13 +236,13 @@ export default function AboutPage() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Schedule a Consultation
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-gold-300 transition-colors hover:text-gold-200"
+                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>

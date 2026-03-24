@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Script from "next/script";
 
@@ -61,13 +62,22 @@ export default function CurtisHubbardPage() {
       <section className="bg-navy-950 py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <FadeIn>
-            <div className="mx-auto h-40 w-40 rounded-full bg-navy-800" role="img" aria-label="Curtis Hubbard, Dallas business litigation attorney" />
+            <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full">
+              <Image
+                src="/images/curtis_hubbard.avif"
+                alt="Curtis Hubbard, Dallas business litigation attorney"
+                fill
+                className="object-cover"
+                sizes="160px"
+                priority
+              />
+            </div>
           </FadeIn>
           <FadeIn delay={0.1}>
             <h1 className="mt-8 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Curtis Hubbard
             </h1>
-            <p className="mt-1 text-lg text-gold-400">Partner</p>
+            <p className="mt-1 text-lg text-white">Partner</p>
             <div className="mt-4 flex justify-center gap-6 text-sm text-charcoal-300">
               <a href="tel:9725037000" className="hover:text-white">
                 (972) 503-7000
@@ -85,7 +95,7 @@ export default function CurtisHubbardPage() {
                 <Link
                   key={a.href}
                   href={a.href}
-                  className="rounded-full border border-gold-400/30 bg-navy-900 px-4 py-1.5 text-xs font-medium text-gold-300 hover:bg-navy-800"
+                  className="rounded-full border border-navy-600/30 bg-navy-900 px-4 py-1.5 text-xs font-medium text-charcoal-200 hover:bg-navy-800"
                 >
                   {a.label}
                 </Link>
@@ -145,7 +155,7 @@ export default function CurtisHubbardPage() {
             <div className="mt-6">
               <Link
                 href="/contact"
-                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-navy-950 hover:bg-gold-300"
+                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-white hover:bg-gold-300"
               >
                 Schedule a Consultation
               </Link>

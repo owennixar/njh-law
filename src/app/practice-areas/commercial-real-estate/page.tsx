@@ -87,7 +87,7 @@ export default function CommercialRealEstatePage() {
       <section className="bg-navy-950 py-28 lg:py-40">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <p className="text-sm font-semibold tracking-wider text-gold-400 uppercase">
+            <p className="text-sm font-semibold tracking-wider text-white uppercase">
               Acquisitions &middot; Development &middot; Leasing &middot;
               Financing
             </p>
@@ -111,7 +111,7 @@ export default function CommercialRealEstatePage() {
             <div className="mt-10">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
               >
                 Schedule a Consultation
               </Link>
@@ -251,7 +251,7 @@ export default function CommercialRealEstatePage() {
               Our{" "}
               <Link
                 href="/attorneys/anthony-jach"
-                className="font-medium text-gold-300 hover:text-gold-200"
+                className="font-medium text-charcoal-200 hover:text-white"
               >
                 real estate attorneys
               </Link>{" "}
@@ -264,7 +264,7 @@ export default function CommercialRealEstatePage() {
 
           {/* Timeline steps — left border accent */}
           <div className="mt-14 grid gap-16 lg:grid-cols-12">
-            <div className="space-y-10 border-l-2 border-gold-400/30 pl-8 lg:col-span-7">
+            <div className="space-y-10 border-l-2 border-navy-600/30 pl-8 lg:col-span-7">
               {[
                 {
                   step: "01",
@@ -290,7 +290,7 @@ export default function CommercialRealEstatePage() {
                 <FadeIn key={item.step} delay={i * 0.08}>
                   <div className="relative">
                     <div className="absolute -left-[calc(2rem+5px)] top-1 h-2.5 w-2.5 rounded-full bg-gold-400" />
-                    <p className="text-xs font-semibold tracking-wider text-gold-400 uppercase">
+                    <p className="text-xs font-semibold tracking-wider text-white uppercase">
                       Step {item.step}
                     </p>
                     <h3 className="mt-1 font-heading text-lg font-bold text-white">
@@ -308,7 +308,7 @@ export default function CommercialRealEstatePage() {
             <div className="lg:col-span-5">
               <FadeIn delay={0.15}>
                 <div className="rounded-lg border border-navy-800 bg-navy-900 p-8">
-                  <p className="text-sm font-semibold tracking-wider text-gold-400 uppercase">
+                  <p className="text-sm font-semibold tracking-wider text-white uppercase">
                     Scenario
                   </p>
                   <p className="mt-3 font-heading text-lg font-bold leading-snug text-white">
@@ -334,8 +334,8 @@ export default function CommercialRealEstatePage() {
 
               {/* GEO extractable block #3 */}
               <FadeIn delay={0.25}>
-                <div className="mt-6 rounded-lg border border-gold-400/20 bg-navy-900 p-6">
-                  <p className="text-sm font-semibold text-gold-300">
+                <div className="mt-6 rounded-lg border border-navy-600/20 bg-navy-900 p-6">
+                  <p className="text-sm font-semibold text-charcoal-200">
                     How to handle a real estate dispute in Dallas
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-charcoal-400">
@@ -402,7 +402,7 @@ export default function CommercialRealEstatePage() {
             <FadeIn className="flex-1">
               <Link
                 href="/practice-areas/construction-law"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-gold-400 hover:bg-white"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-navy-600 hover:bg-white"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Construction Law
@@ -421,7 +421,7 @@ export default function CommercialRealEstatePage() {
             <FadeIn delay={0.1} className="flex-1">
               <Link
                 href="/practice-areas/corporate-transactions"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-gold-400 hover:bg-white"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-navy-600 hover:bg-white"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Corporate Transactions
@@ -440,7 +440,7 @@ export default function CommercialRealEstatePage() {
             <FadeIn delay={0.2} className="flex-1">
               <Link
                 href="/practice-areas/business-litigation"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-gold-400 hover:bg-white"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-navy-600 hover:bg-white"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Business Litigation
@@ -476,13 +476,13 @@ export default function CommercialRealEstatePage() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Discuss Your Transaction
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-gold-300 transition-colors hover:text-gold-200"
+                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>

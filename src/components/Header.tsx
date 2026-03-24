@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -42,14 +43,16 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
-        {/* Firm name */}
-        <Link href="/" className="flex flex-col leading-tight">
-          <span className="font-heading text-lg font-bold tracking-tight text-navy-900 sm:text-xl">
-            Nixon Jach Hubbard
-          </span>
-          <span className="text-[10px] tracking-widest text-charcoal-400 uppercase sm:text-xs">
-            Attorneys at Law
-          </span>
+        {/* Firm logo */}
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/images/NJH_LAW_logo.gif"
+            alt="Nixon Jach Hubbard - Attorneys at Law"
+            width={160}
+            height={52}
+            className="h-12 w-auto sm:h-14"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
@@ -75,7 +78,7 @@ export default function Header() {
           </a>
           <Link
             href="/contact"
-            className="rounded bg-gold-400 px-5 py-2.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+            className="rounded bg-gold-400 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
           >
             Schedule a Consultation
           </Link>
@@ -163,7 +166,7 @@ export default function Header() {
               </a>
               <Link
                 href="/contact"
-                className="mt-2 rounded-lg bg-gold-400 px-5 py-3 text-center text-base font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                className="mt-2 rounded-lg bg-gold-400 px-5 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-gold-300"
                 onClick={() => setMobileOpen(false)}
               >
                 Schedule a Consultation

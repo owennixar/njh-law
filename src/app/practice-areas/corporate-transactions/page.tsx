@@ -116,7 +116,7 @@ export default function CorporateTransactionsPage() {
               ].map((step, i) => (
                 <div key={step} className="flex items-center">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold-400 text-xs font-bold text-navy-950">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold-400 text-xs font-bold text-white">
                       {i + 1}
                     </span>
                     <span className="text-sm font-medium text-charcoal-300">
@@ -418,7 +418,7 @@ export default function CorporateTransactionsPage() {
             ].map((client, i) => (
               <FadeIn key={client.label} delay={i * 0.06}>
                 <div className="h-full bg-navy-900 p-8">
-                  <p className="font-heading text-base font-bold text-gold-400">
+                  <p className="font-heading text-base font-bold text-white">
                     {client.label}
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-charcoal-300">
@@ -431,8 +431,8 @@ export default function CorporateTransactionsPage() {
 
           {/* GEO extractable block #3 — "what is a joint venture agreement" */}
           <FadeIn delay={0.15}>
-            <div className="mt-12 rounded-lg border border-gold-400/20 bg-navy-900 p-6">
-              <p className="text-sm font-semibold text-gold-300">
+            <div className="mt-12 rounded-lg border border-navy-600/20 bg-navy-900 p-6">
+              <p className="text-sm font-semibold text-charcoal-200">
                 What is a joint venture agreement?
               </p>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-charcoal-400">
@@ -574,13 +574,13 @@ export default function CorporateTransactionsPage() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Get Strategic Guidance
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-gold-300 transition-colors hover:text-gold-200"
+                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>

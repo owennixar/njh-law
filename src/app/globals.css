@@ -22,13 +22,13 @@
   --color-charcoal-100: #f3f4f6;
   --color-charcoal-50: #f9fafb;
 
-  /* Gold */
-  --color-gold-600: #92750a;
-  --color-gold-500: #b8960d;
-  --color-gold-400: #d4ad12;
-  --color-gold-300: #e9c53a;
-  --color-gold-200: #f0d86b;
-  --color-gold-100: #faf1c8;
+  /* Accent (logo blue) */
+  --color-gold-600: #132d56;
+  --color-gold-500: #1B3A6B;
+  --color-gold-400: #1B3A6B;
+  --color-gold-300: #132d56;
+  --color-gold-200: #c7d4e6;
+  --color-gold-100: #e8eef6;
 
   /* Semantic */
   --color-background: #ffffff;

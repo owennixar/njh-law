@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Script from "next/script";
 
@@ -68,7 +69,9 @@ export default function AnthonyAlvaradoPage() {
             {/* Dark side — photo */}
             <FadeIn>
               <div className="flex items-end py-16 lg:py-28">
-                <div className="aspect-[4/5] w-full max-w-xs rounded-lg bg-navy-800" role="img" aria-label="Anthony R. Alvarado, Dallas business litigation attorney" />
+                <div className="flex aspect-[4/5] w-full max-w-xs items-center justify-center rounded-lg bg-navy-800">
+                  <span className="font-heading text-5xl font-bold text-white/60">AA</span>
+                </div>
               </div>
             </FadeIn>
             {/* Info side */}
@@ -77,7 +80,7 @@ export default function AnthonyAlvaradoPage() {
                 <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
                   Anthony R. Alvarado
                 </h1>
-                <p className="mt-1 text-lg text-gold-400">Attorney</p>
+                <p className="mt-1 text-lg text-white">Attorney</p>
                 <div className="mt-4 flex flex-wrap gap-x-8 gap-y-1 text-sm text-charcoal-300">
                   <a href="tel:9725037000" className="hover:text-white">
                     (972) 503-7000
@@ -92,13 +95,13 @@ export default function AnthonyAlvaradoPage() {
                 <div className="mt-6 flex gap-3">
                   <Link
                     href="/practice-areas/business-litigation"
-                    className="rounded-full bg-navy-800 px-4 py-1.5 text-xs font-medium text-gold-300 hover:bg-navy-700"
+                    className="rounded-full bg-navy-800 px-4 py-1.5 text-xs font-medium text-charcoal-200 hover:bg-navy-700"
                   >
                     Business Litigation
                   </Link>
                   <Link
                     href="/practice-areas/corporate-transactions"
-                    className="rounded-full bg-navy-800 px-4 py-1.5 text-xs font-medium text-gold-300 hover:bg-navy-700"
+                    className="rounded-full bg-navy-800 px-4 py-1.5 text-xs font-medium text-charcoal-200 hover:bg-navy-700"
                   >
                     Corporate Transactions
                   </Link>
@@ -152,7 +155,7 @@ export default function AnthonyAlvaradoPage() {
               </div>
               <Link
                 href="/contact"
-                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-navy-950 hover:bg-gold-300"
+                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-white hover:bg-gold-300"
               >
                 Schedule a Consultation
               </Link>

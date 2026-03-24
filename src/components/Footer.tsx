@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const currentYear = new Date().getFullYear();
 
@@ -36,9 +37,15 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Firm info column */}
           <div>
-            <p className="font-heading text-lg font-bold text-white">
-              Nixon Jach Hubbard
-            </p>
+            <Link href="/">
+              <Image
+                src="/images/NJH_LAW_logo.gif"
+                alt="Nixon Jach Hubbard - Attorneys at Law"
+                width={140}
+                height={46}
+                className="h-11 w-auto brightness-0 invert"
+              />
+            </Link>
             <address className="mt-4 space-y-1 text-sm not-italic leading-relaxed">
               <p>International Plaza III</p>
               <p>14241 Dallas Parkway, Suite 575</p>
@@ -47,7 +54,7 @@ export default function Footer() {
             <div className="mt-4 space-y-1 text-sm">
               <p>
                 <span className="text-charcoal-400">Phone: </span>
-                <a href="tel:9725037000" className="transition-colors hover:text-gold-300">
+                <a href="tel:9725037000" className="transition-colors hover:text-white">
                   (972) 503-7000
                 </a>
               </p>
@@ -61,7 +68,7 @@ export default function Footer() {
           {/* Nav columns */}
           {navColumns.map((col) => (
             <div key={col.title}>
-              <p className="text-sm font-semibold tracking-wider text-gold-400 uppercase">
+              <p className="text-sm font-semibold tracking-wider text-white uppercase">
                 {col.title}
               </p>
               <ul className="mt-4 space-y-3">

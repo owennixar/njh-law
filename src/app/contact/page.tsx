@@ -121,7 +121,7 @@ export default function ContactPage() {
             {/* FORM — left column */}
             <FadeIn className="lg:col-span-7">
               {submitted ? (
-                <div className="rounded-lg border border-gold-200 bg-gold-100/40 p-10 text-center">
+                <div className="rounded-lg border border-navy-600/20 bg-navy-600/5 p-10 text-center">
                   <p className="font-heading text-2xl font-bold text-navy-900">
                     Thank you for reaching out.
                   </p>
@@ -262,7 +262,7 @@ export default function ContactPage() {
                   <div>
                     <button
                       type="submit"
-                      className="rounded bg-gold-400 px-7 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                      className="rounded bg-gold-400 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                     >
                       Send Your Inquiry
                     </button>

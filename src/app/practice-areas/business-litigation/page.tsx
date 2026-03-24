@@ -95,7 +95,7 @@ export default function BusinessLitigationPage() {
 
               <div className="mt-8 rounded-lg border border-navy-800 bg-navy-900 p-8">
                 <p className="text-sm leading-relaxed text-charcoal-300">
-                  <span className="font-semibold text-gold-400">
+                  <span className="font-semibold text-white">
                     Tuesday, 9:14 AM.
                   </span>{" "}
                   Your CFO finds $340,000 in unauthorized transfers to an LLC
@@ -134,7 +134,7 @@ export default function BusinessLitigationPage() {
               <div className="mt-8">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Schedule a Consultation
                 </Link>
@@ -317,7 +317,7 @@ export default function BusinessLitigationPage() {
 
           {/* GEO block — standalone */}
           <FadeIn delay={0.15}>
-            <div className="mt-12 rounded-lg border border-gold-200 bg-gold-100/40 p-6">
+            <div className="mt-12 rounded-lg border border-navy-600/20 bg-navy-600/5 p-6">
               <p className="text-sm font-semibold text-navy-900">
                 How to handle a partnership dispute in Texas
               </p>
@@ -396,7 +396,7 @@ export default function BusinessLitigationPage() {
             <FadeIn className="md:col-span-6">
               <Link
                 href="/practice-areas/construction-law"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-gold-400"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-navy-600"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Construction Law
@@ -416,7 +416,7 @@ export default function BusinessLitigationPage() {
             <FadeIn delay={0.1} className="md:col-span-3">
               <Link
                 href="/practice-areas/corporate-transactions"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-gold-400"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-navy-600"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Corporate Transactions
@@ -433,7 +433,7 @@ export default function BusinessLitigationPage() {
             <FadeIn delay={0.2} className="md:col-span-3">
               <Link
                 href="/practice-areas/commercial-real-estate"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-gold-400"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-navy-600"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Commercial Real Estate
@@ -468,13 +468,13 @@ export default function BusinessLitigationPage() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Speak With an Attorney
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-gold-300 transition-colors hover:text-gold-200"
+                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>

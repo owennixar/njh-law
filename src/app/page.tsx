@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 /* ------------------------------------------------------------------ */
@@ -64,6 +65,7 @@ const partners = [
     title: "Founding Partner",
     focus: "Construction Law & Business Litigation",
     slug: "michael-nixon",
+    photo: "/images/mike_nixon.avif",
     recognitions: "Super Lawyers 2008\u20132024 \u00b7 Chambers USA 2020\u20132024 \u00b7 Best Lawyers 2019\u20132024",
   },
   {
@@ -71,6 +73,7 @@ const partners = [
     title: "Partner",
     focus: "Commercial Real Estate & Corporate Transactions",
     slug: "anthony-jach",
+    photo: "/images/tony_jach.avif",
     recognitions: "",
   },
   {
@@ -78,6 +81,7 @@ const partners = [
     title: "Partner",
     focus: "Business Litigation & Construction Law",
     slug: "curtis-hubbard",
+    photo: "/images/curtis_hubbard.avif",
     recognitions: "",
   },
 ];
@@ -116,13 +120,13 @@ export default function HomePage() {
               <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Schedule a Consultation
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-gold-300 transition-colors hover:text-gold-200"
+                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>
@@ -192,7 +196,7 @@ export default function HomePage() {
                 >
                   <Link
                     href={`/practice-areas/${area.slug}`}
-                    className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-gold-400 hover:bg-white"
+                    className="group block h-full rounded-lg border border-charcoal-200 bg-charcoal-50 p-8 transition-colors hover:border-navy-600 hover:bg-white"
                   >
                     <h3 className="font-heading text-xl font-bold text-navy-900">
                       {area.name}
@@ -226,7 +230,7 @@ export default function HomePage() {
             {/* Block 1 — large */}
             <FadeIn className="lg:col-span-5">
               <div>
-                <p className="text-sm font-semibold tracking-wider text-gold-400 uppercase">
+                <p className="text-sm font-semibold tracking-wider text-white uppercase">
                   01
                 </p>
                 <h3 className="mt-3 font-heading text-xl font-bold text-white">
@@ -246,7 +250,7 @@ export default function HomePage() {
             {/* Block 2 */}
             <FadeIn delay={0.1} className="lg:col-span-4">
               <div>
-                <p className="text-sm font-semibold tracking-wider text-gold-400 uppercase">
+                <p className="text-sm font-semibold tracking-wider text-white uppercase">
                   02
                 </p>
                 <h3 className="mt-3 font-heading text-xl font-bold text-white">
@@ -266,7 +270,7 @@ export default function HomePage() {
             {/* Block 3 */}
             <FadeIn delay={0.2} className="lg:col-span-3">
               <div>
-                <p className="text-sm font-semibold tracking-wider text-gold-400 uppercase">
+                <p className="text-sm font-semibold tracking-wider text-white uppercase">
                   03
                 </p>
                 <h3 className="mt-3 font-heading text-xl font-bold text-white">
@@ -314,10 +318,18 @@ export default function HomePage() {
                 <FadeIn key={attorney.slug} delay={i * 0.1} className={span}>
                   <Link
                     href={`/attorneys/${attorney.slug}`}
-                    className="group block rounded-lg border border-charcoal-200 p-6 transition-colors hover:border-gold-400"
+                    className="group block rounded-lg border border-charcoal-200 p-6 transition-colors hover:border-navy-600"
                   >
-                    {/* Photo placeholder */}
-                    <div className="aspect-[4/5] rounded bg-charcoal-100" role="img" aria-label={`Professional headshot of ${attorney.name}, Dallas construction and business attorney`} />
+                    {/* Attorney photo */}
+                    <div className="relative aspect-[4/5] overflow-hidden rounded bg-charcoal-100">
+                      <Image
+                        src={attorney.photo}
+                        alt={`Professional headshot of ${attorney.name}, Dallas construction and business attorney`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </div>
                     <h3 className="mt-5 font-heading text-lg font-bold text-navy-900">
                       {attorney.name}
                     </h3>
@@ -369,13 +381,13 @@ export default function HomePage() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Discuss Your Project
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-gold-300 transition-colors hover:text-gold-200"
+                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 function FadeIn({
@@ -33,6 +34,7 @@ const attorneys = [
     focus: "Construction Law & Real Estate Disputes",
     phone: "(972) 503-7000",
     email: "mnixon@njhlaw.com",
+    photo: "/images/mike_nixon.avif",
     recognitions:
       "Super Lawyers 2008, 2010\u20132024 \u00b7 Best Lawyers 2019\u20132024 \u00b7 Chambers USA 2020\u20132024",
   },
@@ -43,6 +45,7 @@ const attorneys = [
     focus: "Commercial Real Estate, Construction & Business Litigation",
     phone: "(972) 503-7000",
     email: "tjach@njhlaw.com",
+    photo: "/images/tony_jach.avif",
     recognitions: "",
   },
   {
@@ -52,6 +55,7 @@ const attorneys = [
     focus: "Business Litigation & Commercial Transactions",
     phone: "(972) 503-7000",
     email: "chubbard@njhlaw.com",
+    photo: "/images/curtis_hubbard.avif",
     recognitions: "",
   },
   {
@@ -61,6 +65,7 @@ const attorneys = [
     focus: "Construction Law & Commercial Real Estate",
     phone: "(972) 503-7000",
     email: "jrusthoven@njhlaw.com",
+    photo: "/images/jeff_rusthoven.avif",
     recognitions: "",
   },
   {
@@ -70,6 +75,7 @@ const attorneys = [
     focus: "Business Litigation & Corporate Transactions",
     phone: "(972) 503-7000",
     email: "aalvarado@njhlaw.com",
+    photo: "",
     recognitions: "",
   },
 ];
@@ -107,16 +113,24 @@ export default function AttorneysPage() {
                 <FadeIn key={attorney.slug} delay={i * 0.08} className={span}>
                   <Link
                     href={`/attorneys/${attorney.slug}`}
-                    className="group block h-full rounded-lg border border-charcoal-200 transition-colors hover:border-gold-400"
+                    className="group block h-full rounded-lg border border-charcoal-200 transition-colors hover:border-navy-600"
                   >
-                    {/* Photo placeholder */}
-                    <div
-                      className={`bg-charcoal-100 ${
-                        i === 0 ? "aspect-[3/4]" : "aspect-[4/5]"
-                      } rounded-t-lg`}
-                      role="img"
-                      aria-label={`Professional headshot of ${attorney.name}, ${attorney.focus} attorney in Dallas`}
-                    />
+                    {/* Attorney photo */}
+                    <div className={`relative overflow-hidden ${i === 0 ? "aspect-[3/4]" : "aspect-[4/5]"} rounded-t-lg bg-charcoal-100`}>
+                      {attorney.photo ? (
+                        <Image
+                          src={attorney.photo}
+                          alt={`Professional headshot of ${attorney.name}, ${attorney.focus} attorney in Dallas`}
+                          fill
+                          className="object-cover"
+                          sizes={i < 2 ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center bg-navy-800">
+                          <span className="font-heading text-4xl font-bold text-white/60">AA</span>
+                        </div>
+                      )}
+                    </div>
                     <div className="p-6">
                       <h2 className="font-heading text-lg font-bold text-navy-900">
                         {attorney.name}
@@ -132,7 +146,7 @@ export default function AttorneysPage() {
                         <p>{attorney.email}</p>
                       </div>
                       {attorney.recognitions && (
-                        <p className="mt-3 text-xs leading-relaxed text-gold-500">
+                        <p className="mt-3 text-xs leading-relaxed text-navy-600">
                           {attorney.recognitions}
                         </p>
                       )}

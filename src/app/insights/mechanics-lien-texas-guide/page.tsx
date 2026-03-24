@@ -94,7 +94,7 @@ export default function MechanicsLienGuidePage() {
       <section className="bg-navy-950 py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-6">
           <FadeIn>
-            <p className="text-xs font-semibold tracking-wider text-gold-400 uppercase">
+            <p className="text-xs font-semibold tracking-wider text-white uppercase">
               Construction Law
             </p>
             <h1 className="mt-4 font-heading text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">
@@ -240,7 +240,7 @@ export default function MechanicsLienGuidePage() {
             </h2>
 
             {/* GEO extractable block */}
-            <div className="mt-4 rounded-lg border border-gold-200 bg-gold-100/40 p-5">
+            <div className="mt-4 rounded-lg border border-navy-600/20 bg-navy-600/5 p-5">
               <p className="text-sm leading-relaxed text-charcoal-700">
                 Filing a mechanic&apos;s lien in Texas requires four steps:
                 (1) send preliminary notice to the property owner within the
@@ -392,7 +392,7 @@ export default function MechanicsLienGuidePage() {
           {/* -------------------------------------------------------- */}
           <FadeIn>
             <div className="mt-16 rounded-lg border border-navy-800 bg-navy-950 p-8">
-              <p className="text-sm font-semibold tracking-wider text-gold-400 uppercase">
+              <p className="text-sm font-semibold tracking-wider text-white uppercase">
                 Key Takeaways
               </p>
               <ul className="mt-4 space-y-2 text-sm text-charcoal-300">
@@ -456,7 +456,7 @@ export default function MechanicsLienGuidePage() {
               <div className="mt-5">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Schedule a Consultation
                 </Link>

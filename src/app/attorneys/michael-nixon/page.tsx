@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Script from "next/script";
 
@@ -76,7 +77,16 @@ export default function MichaelNixonPage() {
           <div className="grid items-end gap-12 lg:grid-cols-12">
             {/* Photo placeholder — offset left */}
             <FadeIn className="lg:col-span-4">
-              <div className="aspect-[3/4] rounded-lg bg-navy-800" role="img" aria-label="Michael S. Nixon, Dallas construction attorney and partner at Nixon Jach Hubbard" />
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                <Image
+                  src="/images/mike_nixon.avif"
+                  alt="Michael S. Nixon, Dallas construction attorney and partner at Nixon Jach Hubbard"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  priority
+                />
+              </div>
             </FadeIn>
 
             {/* Name, title, contact, recognitions */}
@@ -84,7 +94,7 @@ export default function MichaelNixonPage() {
               <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Michael S. Nixon
               </h1>
-              <p className="mt-2 text-lg text-gold-400">Partner</p>
+              <p className="mt-2 text-lg text-white">Partner</p>
 
               <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-charcoal-300">
                 <a
@@ -110,7 +120,7 @@ export default function MichaelNixonPage() {
                 ].map((badge) => (
                   <span
                     key={badge}
-                    className="rounded-full border border-gold-400/30 bg-navy-900 px-4 py-1.5 text-xs font-medium text-gold-300"
+                    className="rounded-full border border-navy-600/30 bg-navy-900 px-4 py-1.5 text-xs font-medium text-charcoal-200"
                   >
                     {badge}
                   </span>
@@ -336,7 +346,7 @@ export default function MichaelNixonPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
               >
                 Schedule a Consultation
               </Link>

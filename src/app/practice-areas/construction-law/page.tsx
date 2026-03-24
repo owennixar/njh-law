@@ -129,7 +129,7 @@ export default function ConstructionLawPage() {
             ].map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 0.08}>
                 <div className="text-center lg:text-left">
-                  <p className="font-heading text-3xl font-bold text-gold-400 lg:text-4xl">
+                  <p className="font-heading text-3xl font-bold text-white lg:text-4xl">
                     {stat.value}
                   </p>
                   <p className="mt-2 text-sm text-charcoal-400">{stat.label}</p>
@@ -186,7 +186,7 @@ export default function ConstructionLawPage() {
                   </p>
 
                   {/* GEO extractable block #3 — "how to resolve" */}
-                  <div className="mt-6 rounded border border-gold-200 bg-gold-100/40 p-5">
+                  <div className="mt-6 rounded border border-navy-600/20 bg-navy-600/5 p-5">
                     <p className="text-sm font-semibold text-navy-900">
                       How to resolve a construction dispute in Texas
                     </p>
@@ -395,7 +395,7 @@ export default function ConstructionLawPage() {
             ].map((client, i) => (
               <FadeIn key={client.label} delay={i * 0.05}>
                 <div className="rounded-lg border border-navy-800 bg-navy-900 p-6">
-                  <p className="font-heading text-base font-bold text-gold-400">
+                  <p className="font-heading text-base font-bold text-white">
                     {client.label}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-charcoal-300">
@@ -457,7 +457,7 @@ export default function ConstructionLawPage() {
             <FadeIn className="md:col-span-5">
               <Link
                 href="/practice-areas/commercial-real-estate"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-gold-400"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-navy-600"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Commercial Real Estate
@@ -477,7 +477,7 @@ export default function ConstructionLawPage() {
             <FadeIn delay={0.1} className="md:col-span-4">
               <Link
                 href="/practice-areas/business-litigation"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-gold-400"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-navy-600"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Business Litigation
@@ -497,7 +497,7 @@ export default function ConstructionLawPage() {
             <FadeIn delay={0.2} className="md:col-span-3">
               <Link
                 href="/practice-areas/corporate-transactions"
-                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-gold-400"
+                className="group block h-full rounded-lg border border-charcoal-200 bg-white p-8 transition-colors hover:border-navy-600"
               >
                 <h3 className="font-heading text-lg font-bold text-navy-900">
                   Corporate Transactions
@@ -533,13 +533,13 @@ export default function ConstructionLawPage() {
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-950 transition-colors hover:bg-gold-300"
+                  className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
                 >
                   Discuss Your Project
                 </Link>
                 <a
                   href="tel:9725037000"
-                  className="text-sm font-medium text-gold-300 transition-colors hover:text-gold-200"
+                  className="text-sm font-medium text-charcoal-200 transition-colors hover:text-white"
                 >
                   (972)&nbsp;503-7000
                 </a>
