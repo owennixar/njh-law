@@ -147,12 +147,12 @@ export default function HomePage() {
           quality={85}
         />
 
-        {/* Dark gradient overlay — left-to-right */}
+        {/* Dark gradient overlay — left-to-right, strong enough for daytime skyline */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(10,20,40,0.85) 0%, rgba(10,20,40,0.85) 35%, rgba(10,20,40,0.4) 60%, transparent 100%)",
+              "linear-gradient(to right, rgba(10,20,40,0.92) 0%, rgba(10,20,40,0.88) 40%, rgba(10,20,40,0.5) 65%, rgba(10,20,40,0.15) 100%)",
           }}
         />
 
@@ -200,24 +200,24 @@ export default function HomePage() {
       {/* ============================================================ */}
       <section className="border-b border-charcoal-100 bg-white py-8 lg:py-10">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-center lg:gap-4">
-            <p className="shrink-0 font-heading text-sm font-bold text-navy-900 lg:text-base">
+          <div className="flex flex-col items-center gap-4">
+            <p className="font-heading text-sm font-bold text-navy-900 lg:text-base">
               Our attorneys are recognized&nbsp;by:
             </p>
             <div
-              className="flex flex-nowrap items-center justify-center gap-2 lg:flex-1 lg:justify-start"
+              className="flex flex-wrap items-center justify-center gap-3"
               aria-label="Attorney recognition and awards"
             >
               {[
-                "Super Lawyers",
-                "Best Lawyers",
-                "Chambers USA",
+                "Super Lawyers (2008–2024)",
+                "Best Lawyers (2019–2024)",
+                "Chambers USA (2020–2024)",
                 "AV Preeminent",
-                "Best Law Firms",
+                "Best Law Firms – Tier 1",
               ].map((award) => (
                 <span
                   key={award}
-                  className="inline-block whitespace-nowrap rounded-full border border-charcoal-200 px-3 py-1 text-xs font-medium text-navy-900"
+                  className="inline-block whitespace-nowrap rounded-full border border-charcoal-200 px-4 py-1.5 text-xs font-medium text-navy-900"
                 >
                   {award}
                 </span>
