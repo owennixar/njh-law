@@ -31,7 +31,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Jeffery H. Rusthoven",
-  jobTitle: "Attorney",
+  jobTitle: "Partner",
   worksFor: {
     "@type": "LegalService",
     name: "Nixon Jach Hubbard",
@@ -45,7 +45,18 @@ const personSchema = {
   },
   telephone: "(972) 503-7006",
   email: "jrusthoven@njh-law.com",
-  knowsAbout: ["Construction Law", "Commercial Real Estate"],
+  url: "https://njh-law.com/attorneys/jeffery-rusthoven",
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "University of Texas at Austin" },
+    { "@type": "CollegeOrUniversity", name: "University of North Texas" },
+    { "@type": "CollegeOrUniversity", name: "Baylor University School of Law" },
+  ],
+  knowsAbout: [
+    "Construction Law",
+    "Construction Litigation",
+    "Business Litigation",
+    "Appellate Law",
+  ],
 };
 
 export default function JefferyRusthovenPage() {
@@ -58,105 +69,306 @@ export default function JefferyRusthovenPage() {
         strategy="afterInteractive"
       />
 
-      {/* HEADER — card style, photo right */}
-      <section className="bg-navy-950 py-20 lg:py-28">
+      {/* ============================================================ */}
+      {/* BIO HEADER — wide layout, photo offset left                  */}
+      {/* ============================================================ */}
+      <section className="bg-navy-950 py-24 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid items-center gap-10 lg:grid-cols-12">
-            <FadeIn className="lg:col-span-7">
-              <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <div className="grid items-end gap-12 lg:grid-cols-12">
+            {/* Photo — offset left */}
+            <FadeIn className="lg:col-span-4">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                <Image
+                  src="/images/jeff_rusthoven.avif"
+                  alt="Jeffery H. Rusthoven, Dallas construction attorney and partner at Nixon Jach Hubbard"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  priority
+                />
+              </div>
+            </FadeIn>
+
+            {/* Name, title, contact, recognitions */}
+            <FadeIn delay={0.1} className="lg:col-span-8">
+              <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Jeffery H. Rusthoven
               </h1>
-              <p className="mt-1 text-lg text-white">Attorney</p>
-              <div className="mt-4 flex flex-wrap gap-x-8 gap-y-1 text-sm text-charcoal-300">
-                <a href="tel:9725037006" className="hover:text-white">
+              <p className="mt-2 text-lg text-white">Partner</p>
+
+              <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-charcoal-300">
+                <a
+                  href="tel:9725037006"
+                  className="transition-colors hover:text-white"
+                >
                   (972) 503-7006
                 </a>
                 <a
                   href="mailto:jrusthoven@njh-law.com"
-                  className="hover:text-white"
+                  className="transition-colors hover:text-white"
                 >
                   jrusthoven@njh-law.com
                 </a>
               </div>
-              <div className="mt-6 flex gap-3">
-                <Link
-                  href="/practice-areas/construction-law"
-                  className="rounded border border-navy-700 px-3 py-1 text-xs text-charcoal-300 hover:border-navy-600 hover:text-charcoal-200"
-                >
-                  Construction Law
-                </Link>
-                <Link
-                  href="/practice-areas/commercial-real-estate"
-                  className="rounded border border-navy-700 px-3 py-1 text-xs text-charcoal-300 hover:border-navy-600 hover:text-charcoal-200"
-                >
-                  Commercial Real Estate
-                </Link>
-              </div>
-            </FadeIn>
-            <FadeIn delay={0.1} className="lg:col-span-5">
-              <div className="relative aspect-square max-w-xs overflow-hidden rounded-lg lg:ml-auto">
-                <Image
-                  src="/images/jeff_rusthoven.avif"
-                  alt="Jeffery H. Rusthoven, Dallas construction and real estate attorney"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  priority
-                />
+
+              {/* Recognition badges */}
+              <div className="mt-8 flex flex-wrap gap-3">
+                {[
+                  "Board Certified \u2013 Construction Law",
+                  "Former Law Clerk, Sixth District Court of Appeals",
+                ].map((badge) => (
+                  <span
+                    key={badge}
+                    className="rounded-full border border-navy-600/30 bg-navy-900 px-4 py-1.5 text-xs font-medium text-charcoal-200"
+                  >
+                    {badge}
+                  </span>
+                ))}
               </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ============================================================ */}
+      {/* OVERVIEW — narrative, third person                            */}
+      {/* ============================================================ */}
       <section className="bg-white py-24 lg:py-32">
-        <div className="mx-auto max-w-3xl px-6">
-          <FadeIn>
-            <h2 className="font-heading text-2xl font-bold text-navy-900">
-              Construction law and commercial real estate in Dallas
-            </h2>
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-16 lg:grid-cols-12">
+            <FadeIn className="lg:col-span-7">
+              <h2 className="font-heading text-2xl font-bold text-navy-900">
+                Board certified in construction law with two decades of litigation experience
+              </h2>
 
-            <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
-              Jeff Rusthoven handles construction contract disputes, mechanic&apos;s
-              lien claims under Texas Property Code Chapter 53, delay and
-              payment disputes, and construction defect matters for contractors
-              and owners across the DFW metroplex.
-            </p>
+              <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
+                Jeff Rusthoven is a partner at Nixon Jach Hubbard, PLLC. Jeff is
+                board certified in construction law and has represented numerous
+                clients in complex construction and business litigation disputes
+                for the past two decades.
+              </p>
 
-            <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-              His commercial real estate work includes purchase and sale
-              agreement negotiation, lease drafting and review, due diligence
-              coordination, and title analysis for commercial transactions
-              in North Texas. Jeff works closely with the firm&apos;s partners
-              on complex matters where construction and real estate interests
-              overlap.
-            </p>
-          </FadeIn>
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Jeff has successfully litigated and arbitrated
+                construction-related disputes as well as successfully handled a
+                variety of legal issues for both owners and contractors. Prior to
+                beginning private practice, Jeff was the law clerk for Chief
+                Justice William J. Cornelius for the Sixth District Court of
+                Appeals of Texas.
+              </p>
+            </FadeIn>
+
+            {/* Sidebar — quick facts + practice areas */}
+            <FadeIn delay={0.15} className="lg:col-span-5">
+              <div className="rounded-lg border border-charcoal-200 bg-charcoal-50 p-8">
+                <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                  Practice Areas
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {[
+                    {
+                      href: "/practice-areas/construction-law",
+                      label: "Construction Law",
+                    },
+                    {
+                      href: "/practice-areas/business-litigation",
+                      label: "Business Litigation",
+                    },
+                  ].map((area) => (
+                    <li key={area.href}>
+                      <Link
+                        href={area.href}
+                        className="text-sm font-medium text-navy-900 transition-colors hover:text-gold-600"
+                      >
+                        {area.label} &rarr;
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6 rounded-lg border border-charcoal-200 bg-charcoal-50 p-8">
+                <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                  At a glance
+                </h3>
+                <dl className="mt-4 space-y-3 text-sm">
+                  <div>
+                    <dt className="text-charcoal-400">Board Certified</dt>
+                    <dd className="font-medium text-navy-900">
+                      Construction Law &ndash; Texas Board of Legal
+                      Specialization
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-charcoal-400">Texas Bar</dt>
+                    <dd className="font-medium text-navy-900">Since 1999</dd>
+                  </div>
+                  <div>
+                    <dt className="text-charcoal-400">Education</dt>
+                    <dd className="font-medium text-navy-900">
+                      Baylor University &ndash; J.D.
+                    </dd>
+                    <dd className="font-medium text-navy-900">
+                      University of North Texas &ndash; M.P.A.
+                    </dd>
+                    <dd className="font-medium text-navy-900">
+                      University of Texas at Austin &ndash; B.B.A.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-charcoal-400">Direct Line</dt>
+                    <dd className="font-medium text-navy-900">
+                      <a href="tel:9725037006" className="hover:text-gold-600">
+                        (972) 503-7006
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy-900 py-16">
+      {/* ============================================================ */}
+      {/* CREDENTIALS — detailed, full width                           */}
+      {/* ============================================================ */}
+      <section className="bg-charcoal-50 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="font-heading text-2xl font-bold text-navy-900">
+              Credentials
+            </h2>
+          </FadeIn>
+
+          <div className="mt-12 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+            <FadeIn>
+              <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                Bar Admissions
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
+                <li>State Bar of Texas &ndash; 1999</li>
+                <li>U.S. District Court, Northern District of Texas</li>
+                <li>U.S. District Court, Southern District of Texas</li>
+                <li>U.S. District Court, Eastern District of Texas</li>
+                <li>U.S. District Court, Western District of Texas</li>
+                <li>U.S. Court of Appeals &ndash; Fifth Circuit</li>
+              </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.08}>
+              <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                Education
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
+                <li>
+                  <strong>J.D.</strong>, Baylor University
+                  <br />
+                  <span className="text-charcoal-400">
+                    Order of the Barristers
+                  </span>
+                </li>
+                <li>
+                  <strong>M.P.A.</strong>, University of North Texas
+                  <br />
+                  <span className="text-charcoal-400">
+                    Pi Alpha Alpha Honor Fraternity
+                  </span>
+                </li>
+                <li>
+                  <strong>B.B.A.</strong>, University of Texas at Austin
+                </li>
+              </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.16}>
+              <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                Professional Memberships
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
+                <li>
+                  Board Certified in Construction Law by the Texas Board of
+                  Legal Specialization
+                </li>
+                <li>
+                  Dallas Bar Association &ndash; Council Member, Construction Law
+                  Section (2015&ndash;Present); Construction Law Section, Tort
+                  and Insurance Section, Appellate Law Section
+                </li>
+                <li>
+                  State Bar of Texas &ndash; Construction Law Section, Appellate
+                  Law Section
+                </li>
+                <li>
+                  TEXO (Associated General Contractors / Associated Builders
+                  &amp; Contractors &ndash; Joint Association)
+                </li>
+                <li>College of the State Bar of Texas &ndash; Member</li>
+                <li>
+                  Law Clerk to Chief Justice William J. Cornelius, Sixth
+                  District Court of Appeals of Texas
+                </li>
+                <li>St. Elizabeth Ann Seton &ndash; Men&apos;s Club</li>
+              </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.24}>
+              <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                Selected Speeches &amp; Publications
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
+                <li>Construction Case Law Update</li>
+                <li>Contractor&apos;s Liability for Design Defects</li>
+                <li>
+                  The Economic Loss Doctrine &ndash; Still a Viable Defense in
+                  Construction Dispute?
+                </li>
+                <li>
+                  Construction Arbitrations &ndash; What Everyone Needs to Know
+                </li>
+                <li>
+                  Five Things Every Non-Construction Lawyer Should Know
+                </li>
+                <li>
+                  Delays, Disruptions and Problems Encountered During the
+                  Construction Process (Co-Author)
+                </li>
+                <li>Personal Liability and Retaining Control</li>
+              </ul>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* CTA                                                          */}
+      {/* ============================================================ */}
+      <section className="bg-navy-900 py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white">
+                <h2 className="font-heading text-3xl font-bold tracking-tight text-white">
                   Speak with Jeff directly
                 </h2>
-                <div className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-sm text-charcoal-300">
-                  <a href="tel:9725037006" className="hover:text-white">
+                <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm text-charcoal-300">
+                  <a
+                    href="tel:9725037006"
+                    className="transition-colors hover:text-white"
+                  >
                     (972) 503-7006
                   </a>
-                  <a href="mailto:jrusthoven@njh-law.com" className="hover:text-white">
+                  <a
+                    href="mailto:jrusthoven@njh-law.com"
+                    className="transition-colors hover:text-white"
+                  >
                     jrusthoven@njh-law.com
                   </a>
                 </div>
               </div>
               <Link
                 href="/contact"
-                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-white hover:bg-gold-300"
+                className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
               >
                 Schedule a Consultation
               </Link>

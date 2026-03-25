@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Anthony R. Alvarado | Nixon Jach Hubbard | Dallas Business Attorney",
+  title: "Anthony R. Alvarado | Nixon Jach Hubbard | Dallas Construction Attorney",
   description:
-    "Anthony Alvarado is a Dallas business litigation and corporate transactions attorney at Nixon Jach Hubbard, handling contract disputes and entity formation.",
+    "Anthony Alvarado is an associate at Nixon Jach Hubbard, a solution-oriented construction attorney focused on payment and performance disputes, lien and bond claims in Texas.",
   openGraph: {
-    title: "Anthony R. Alvarado | Dallas Business Attorney",
+    title: "Anthony R. Alvarado | Dallas Construction Attorney",
     description:
-      "Attorney at Nixon Jach Hubbard. Business litigation and corporate transactions in Dallas, Texas.",
+      "Associate at Nixon Jach Hubbard. Construction law focused on payment disputes, lien and bond claims in Dallas, Texas.",
   },
 };
 

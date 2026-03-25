@@ -30,7 +30,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Anthony R. Alvarado",
-  jobTitle: "Attorney",
+  jobTitle: "Associate",
   worksFor: {
     "@type": "LegalService",
     name: "Nixon Jach Hubbard",
@@ -44,9 +44,16 @@ const personSchema = {
   },
   telephone: "(972) 503-7007",
   email: "aalvarado@njh-law.com",
+  url: "https://njh-law.com/attorneys/anthony-alvarado",
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "University of Texas Pan American" },
+    { "@type": "CollegeOrUniversity", name: "Western Michigan University Cooley Law School" },
+  ],
   knowsAbout: [
-    "Business Litigation",
-    "Corporate Transactions",
+    "Construction Law",
+    "Payment Disputes",
+    "Mechanic\u2019s Liens",
+    "Bond Claims",
   ],
 };
 
@@ -60,103 +67,248 @@ export default function AnthonyAlvaradoPage() {
         strategy="afterInteractive"
       />
 
-      {/* HEADER — split dark/light */}
-      <section className="bg-navy-950">
+      {/* ============================================================ */}
+      {/* BIO HEADER — wide layout, initials placeholder               */}
+      {/* ============================================================ */}
+      <section className="bg-navy-950 py-24 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid lg:grid-cols-2">
-            {/* Dark side — photo placeholder */}
-            <FadeIn>
-              <div className="flex items-end py-16 lg:py-28">
-                <div className="flex aspect-[4/5] w-full max-w-xs items-center justify-center rounded-lg bg-navy-800">
-                  <span className="font-heading text-5xl font-bold text-white/60">AA</span>
-                </div>
+          <div className="grid items-end gap-12 lg:grid-cols-12">
+            {/* Photo placeholder */}
+            <FadeIn className="lg:col-span-4">
+              <div className="relative flex aspect-[3/4] items-center justify-center overflow-hidden rounded-lg bg-navy-800">
+                <span className="font-heading text-6xl font-bold text-white/60">
+                  AA
+                </span>
               </div>
             </FadeIn>
-            {/* Info side */}
-            <FadeIn delay={0.1}>
-              <div className="flex flex-col justify-center py-16 lg:py-28 lg:pl-12">
-                <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Anthony R. Alvarado
-                </h1>
-                <p className="mt-1 text-lg text-white">Attorney</p>
-                <div className="mt-4 flex flex-wrap gap-x-8 gap-y-1 text-sm text-charcoal-300">
-                  <a href="tel:9725037007" className="hover:text-white">
-                    (972) 503-7007
-                  </a>
-                  <a
-                    href="mailto:aalvarado@njh-law.com"
-                    className="hover:text-white"
+
+            {/* Name, title, contact */}
+            <FadeIn delay={0.1} className="lg:col-span-8">
+              <h1 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+                Anthony R. Alvarado
+              </h1>
+              <p className="mt-2 text-lg text-white">Associate</p>
+
+              <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-charcoal-300">
+                <a
+                  href="tel:9725037007"
+                  className="transition-colors hover:text-white"
+                >
+                  (972) 503-7007
+                </a>
+                <a
+                  href="mailto:aalvarado@njh-law.com"
+                  className="transition-colors hover:text-white"
+                >
+                  aalvarado@njh-law.com
+                </a>
+              </div>
+
+              {/* Recognition badges */}
+              <div className="mt-8 flex flex-wrap gap-3">
+                {[
+                  "College of the State Bar of Texas",
+                  "Top 100 Magazine",
+                ].map((badge) => (
+                  <span
+                    key={badge}
+                    className="rounded-full border border-navy-600/30 bg-navy-900 px-4 py-1.5 text-xs font-medium text-charcoal-200"
                   >
-                    aalvarado@njh-law.com
-                  </a>
-                </div>
-                <div className="mt-6 flex gap-3">
-                  <Link
-                    href="/practice-areas/business-litigation"
-                    className="rounded-full bg-navy-800 px-4 py-1.5 text-xs font-medium text-charcoal-200 hover:bg-navy-700"
-                  >
-                    Business Litigation
-                  </Link>
-                  <Link
-                    href="/practice-areas/corporate-transactions"
-                    className="rounded-full bg-navy-800 px-4 py-1.5 text-xs font-medium text-charcoal-200 hover:bg-navy-700"
-                  >
-                    Corporate Transactions
-                  </Link>
-                </div>
+                    {badge}
+                  </span>
+                ))}
               </div>
             </FadeIn>
           </div>
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ============================================================ */}
+      {/* OVERVIEW — narrative, third person                            */}
+      {/* ============================================================ */}
       <section className="bg-white py-24 lg:py-32">
-        <div className="mx-auto max-w-3xl px-6">
-          <FadeIn>
-            <h2 className="font-heading text-2xl font-bold text-navy-900">
-              Business litigation and corporate transactions in Dallas
-            </h2>
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-16 lg:grid-cols-12">
+            <FadeIn className="lg:col-span-7">
+              <h2 className="font-heading text-2xl font-bold text-navy-900">
+                Solution-oriented construction attorney focused on payment and performance disputes
+              </h2>
 
-            <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
-              Anthony Alvarado represents businesses in commercial disputes
-              and corporate matters across the DFW metroplex. His litigation
-              practice covers breach of contract claims, partnership disputes,
-              non-compete enforcement, and injunctive relief.
-            </p>
+              <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
+                Anthony Alvarado is an associate at Nixon Jach Hubbard, PLLC.
+                Anthony is a solution-oriented construction attorney who
+                represents clients across all aspects of the construction
+                industry — including general contractors, subcontractors, and
+                material suppliers.
+              </p>
 
-            <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-              His corporate work includes LLC and corporation formation,
-              operating agreement drafting, shareholder agreements, and
-              commercial contract negotiation. Anthony works with the
-              firm&apos;s partners on complex multi-party litigation and
-              entity structuring for construction and real estate companies.
-            </p>
-          </FadeIn>
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                His practice is primarily focused on payment and performance
+                disputes, including resolution of lien and bond claims, as well
+                as other claims typical to the construction industry.
+              </p>
+            </FadeIn>
+
+            {/* Sidebar — quick facts + practice areas */}
+            <FadeIn delay={0.15} className="lg:col-span-5">
+              <div className="rounded-lg border border-charcoal-200 bg-charcoal-50 p-8">
+                <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                  Practice Areas
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  {[
+                    {
+                      href: "/practice-areas/construction-law",
+                      label: "Construction Law",
+                    },
+                    {
+                      href: "/practice-areas/business-litigation",
+                      label: "Business Litigation",
+                    },
+                  ].map((area) => (
+                    <li key={area.href}>
+                      <Link
+                        href={area.href}
+                        className="text-sm font-medium text-navy-900 transition-colors hover:text-gold-600"
+                      >
+                        {area.label} &rarr;
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6 rounded-lg border border-charcoal-200 bg-charcoal-50 p-8">
+                <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                  At a glance
+                </h3>
+                <dl className="mt-4 space-y-3 text-sm">
+                  <div>
+                    <dt className="text-charcoal-400">Texas Bar</dt>
+                    <dd className="font-medium text-navy-900">Since 2021</dd>
+                  </div>
+                  <div>
+                    <dt className="text-charcoal-400">Education</dt>
+                    <dd className="font-medium text-navy-900">
+                      Western Michigan University Cooley Law School &ndash; J.D.
+                    </dd>
+                    <dd className="font-medium text-navy-900">
+                      University of Texas Pan American &ndash; B.S.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-charcoal-400">Direct Line</dt>
+                    <dd className="font-medium text-navy-900">
+                      <a href="tel:9725037007" className="hover:text-gold-600">
+                        (972) 503-7007
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-navy-900 py-16">
+      {/* ============================================================ */}
+      {/* CREDENTIALS — detailed, full width                           */}
+      {/* ============================================================ */}
+      <section className="bg-charcoal-50 py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6">
           <FadeIn>
-            <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="font-heading text-2xl font-bold text-navy-900">
+              Credentials
+            </h2>
+          </FadeIn>
+
+          <div className="mt-12 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+            <FadeIn>
+              <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                Bar Admissions
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
+                <li>Texas &ndash; 2021</li>
+              </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.08}>
+              <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                Education
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
+                <li>
+                  <strong>J.D.</strong>, Western Michigan University Cooley Law
+                  School
+                  <br />
+                  <span className="text-charcoal-400">
+                    Dean&apos;s List, Homeland and National Security Law Review
+                    &ndash; Associate Editor
+                  </span>
+                </li>
+                <li>
+                  <strong>B.S.</strong>, University of Texas Pan American
+                  <br />
+                  <span className="text-charcoal-400">Cum Laude</span>
+                </li>
+              </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.16}>
+              <h3 className="text-sm font-semibold tracking-wider text-gold-500 uppercase">
+                Professional Memberships
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
+                <li>
+                  State Bar of Texas &ndash; Collaborative Law Section, Family
+                  Law Section, Litigation Section, Real Estate, Probate, and
+                  Trust Law Section
+                </li>
+                <li>
+                  Dallas Bar Association &ndash; Construction Law Section,
+                  Hispanic Bar Association, Young Lawyers Association
+                </li>
+                <li>College of the State Bar of Texas &ndash; Member</li>
+                <li>Top 100 Magazine</li>
+              </ul>
+            </FadeIn>
+
+            <FadeIn delay={0.24}>
+              <div />
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* CTA                                                          */}
+      {/* ============================================================ */}
+      <section className="bg-navy-900 py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <h2 className="font-heading text-2xl font-bold text-white">
+                <h2 className="font-heading text-3xl font-bold tracking-tight text-white">
                   Speak with Anthony directly
                 </h2>
-                <div className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-sm text-charcoal-300">
-                  <a href="tel:9725037007" className="hover:text-white">
+                <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm text-charcoal-300">
+                  <a
+                    href="tel:9725037007"
+                    className="transition-colors hover:text-white"
+                  >
                     (972) 503-7007
                   </a>
-                  <a href="mailto:aalvarado@njh-law.com" className="hover:text-white">
+                  <a
+                    href="mailto:aalvarado@njh-law.com"
+                    className="transition-colors hover:text-white"
+                  >
                     aalvarado@njh-law.com
                   </a>
                 </div>
               </div>
               <Link
                 href="/contact"
-                className="rounded bg-gold-400 px-6 py-3 text-sm font-semibold text-white hover:bg-gold-300"
+                className="inline-flex items-center justify-center rounded bg-gold-400 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
               >
                 Schedule a Consultation
               </Link>
