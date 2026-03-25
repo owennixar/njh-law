@@ -141,19 +141,50 @@ export default function CurtisHubbardPage() {
               </h2>
 
               <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
-                Curtis Hubbard is a founding member of Nixon Jach Hubbard, PLLC.
-                Curtis has focused and developed his practice in drafting and
-                negotiating contracts for both contractors as well as owners. In
-                addition, Curtis has successfully litigated and arbitrated
-                numerous construction-related disputes and successfully handled a
-                variety of legal issues for developers and commercial contractors
-                engaged in both public and private work.
+                Curtis Hubbard is a founding member of Nixon Jach Hubbard,
+                PLLC. He has built his practice around two pillars: drafting
+                and negotiating construction contracts, and litigating the
+                disputes that arise when projects go wrong.
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-                Curtis has been admitted to practice law in the states of Texas
-                and Arkansas, as well as before all the U.S. District Courts of
-                Texas.
+                Strong contracts prevent disputes before they start. Curtis
+                understands how construction projects are structured from
+                bid to closeout. That knowledge allows him to draft
+                provisions that protect clients against payment failures,
+                scope disputes, and delay claims. Owners, general
+                contractors, and subcontractors each face different risks.
+                Curtis tailors every contract to the client&apos;s specific
+                position on the project.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                When disputes cannot be avoided, Curtis brings firsthand
+                knowledge of contract intent into the courtroom. He has
+                litigated and arbitrated construction-related disputes for
+                developers and commercial contractors on both public and
+                private work. An attorney who drafts the deal and tries
+                the case sees both sides of every construction conflict.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Curtis holds bar admissions in both Texas and Arkansas,
+                which expands the firm&apos;s geographic reach for clients
+                with projects crossing state lines. He also practices
+                before all four U.S. District Courts in Texas and the
+                Fifth Circuit Court of Appeals.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                His peers recognize his authority in this field. Curtis
+                speaks on construction law topics as a presiding officer
+                and presenter at CLE seminars. Attorneys who teach other
+                attorneys demonstrate a depth of knowledge that goes
+                beyond day-to-day practice. His Super Lawyers recognition
+                since 2011 and Best Lawyers selection since 2021 reflect
+                that standing. As Executive Editor of the Baylor Law
+                Review, he built the research and writing discipline that
+                continues to sharpen his legal work today.
               </p>
             </FadeIn>
 

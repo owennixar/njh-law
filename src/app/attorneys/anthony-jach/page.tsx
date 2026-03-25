@@ -142,18 +142,46 @@ export default function AnthonyJachPage() {
               </h2>
 
               <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
-                Tony Jach is a founding member of Nixon Jach Hubbard, PLLC. Tony
-                has been recognized by multiple publications and by his peers as
-                one of the top construction attorneys in Texas. He routinely
-                speaks at industry functions and continuing legal education
-                seminars on construction law, litigation, and practical dispute
-                resolution.
+                Tony Jach is a founding member of Nixon Jach Hubbard, PLLC.
+                Multiple publications and his peers recognize him as one of
+                the top construction attorneys in Texas. He speaks regularly
+                at industry functions and CLE seminars on construction law,
+                litigation, and practical dispute resolution.
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-                Tony has successfully litigated, arbitrated and resolved numerous
-                construction-related disputes for developers and commercial
-                contractors engaged in both public and private work.
+                In 2015, members of the Dallas Bar Association Construction
+                Law Section elected Tony as their President. That role reflects
+                the trust and respect he holds among fellow construction
+                attorneys across the Dallas legal community. Lawyers who lead
+                bar sections earn that position through years of active
+                involvement and peer recognition.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Tony handles a broad range of construction disputes. His
+                cases involve delay claims, payment disputes, defect claims,
+                and contract negotiations. He represents general contractors,
+                subcontractors, and developers on both public and private
+                projects across commercial and industrial sectors.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                What sets Tony apart is his dual role as both a litigator
+                and a transactional attorney. He drafts and negotiates
+                construction contracts in addition to trying cases. That
+                combination gives him a clear advantage in the courtroom.
+                He understands how deals are structured from the ground up,
+                which sharpens his ability to argue contract intent before
+                a judge or arbitrator.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Tony has litigated, arbitrated, and resolved construction
+                disputes for more than three decades. His Chambers USA
+                ranking and Super Lawyers recognition since 2010 confirm
+                what his clients already know — he delivers results across
+                the full scope of construction law.
               </p>
             </FadeIn>
 

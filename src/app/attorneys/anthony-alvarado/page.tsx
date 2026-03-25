@@ -135,17 +135,43 @@ export default function AnthonyAlvaradoPage() {
               </h2>
 
               <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
-                Anthony Alvarado is an associate at Nixon Jach Hubbard, PLLC.
-                Anthony is a solution-oriented construction attorney who
-                represents clients across all aspects of the construction
-                industry — including general contractors, subcontractors, and
-                material suppliers.
+                Anthony Alvarado is an associate at Nixon Jach Hubbard,
+                PLLC. He represents clients across all segments of the
+                construction industry — general contractors,
+                subcontractors, and material suppliers. His practice
+                centers on the payment and performance disputes that
+                form the backbone of construction law.
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-                His practice is primarily focused on payment and performance
-                disputes, including resolution of lien and bond claims, as well
-                as other claims typical to the construction industry.
+                Anthony handles lien filings, bond claims, and payment
+                disputes on a daily basis. This work demands precision
+                and strict compliance with statutory deadlines. Missing
+                a filing window by a single day can eliminate a
+                client&apos;s entire claim. Anthony tracks every
+                deadline and filing requirement to protect his
+                clients&apos; rights from the start.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Working across all client types the firm represents
+                gives Anthony broad construction industry knowledge
+                early in his career. He sees disputes from the
+                perspective of general contractors, subcontractors,
+                and suppliers alike. That range builds a well-rounded
+                understanding of how construction projects succeed
+                and where they break down.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Anthony focused on construction law from the start of
+                his career rather than arriving from general practice.
+                That early specialization accelerates his growth in
+                the field. He graduated Cum Laude from the University
+                of Texas Pan American and served as Associate Editor
+                on the Homeland and National Security Law Review during
+                law school. Those credentials reflect the discipline
+                and attention to detail he brings to every matter.
               </p>
             </FadeIn>
 

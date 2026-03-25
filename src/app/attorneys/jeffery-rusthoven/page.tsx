@@ -142,19 +142,53 @@ export default function JefferyRusthovenPage() {
               </h2>
 
               <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
-                Jeff Rusthoven is a partner at Nixon Jach Hubbard, PLLC. Jeff is
-                board certified in construction law and has represented numerous
-                clients in complex construction and business litigation disputes
-                for the past two decades.
+                Jeff Rusthoven is a partner at Nixon Jach Hubbard, PLLC.
+                He is board certified in construction law by the Texas
+                Board of Legal Specialization. Only about 151 attorneys
+                in Texas hold this certification. It requires years of
+                focused experience, peer references, and a rigorous
+                examination. Board certification is the state&apos;s
+                highest recognition of legal expertise in a practice area.
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-                Jeff has successfully litigated and arbitrated
-                construction-related disputes as well as successfully handled a
-                variety of legal issues for both owners and contractors. Prior to
-                beginning private practice, Jeff was the law clerk for Chief
-                Justice William J. Cornelius for the Sixth District Court of
-                Appeals of Texas.
+                Before entering private practice, Jeff served as law clerk
+                to Chief Justice William J. Cornelius at the Sixth District
+                Court of Appeals of Texas. That clerkship gave him a rare
+                window into how appellate judges evaluate trial records
+                and legal arguments. He applies that perspective to every
+                case he tries. He builds trial records with the appeals
+                court in mind, which strengthens his clients&apos;
+                positions at every stage of litigation.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Jeff has published widely on construction law topics. His
+                works cover contractor liability for design defects, the
+                economic loss doctrine, and construction arbitrations.
+                An attorney who writes about these issues signals deep
+                knowledge to courts and opposing counsel alike. His
+                published analysis demonstrates the same rigor he brings
+                to client matters.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Jeff holds three degrees: a B.B.A. from the University
+                of Texas at Austin, an M.P.A. from the University of
+                North Texas, and a J.D. from Baylor University. His
+                combined business and public administration education
+                gives him a financial and operational perspective that
+                pure litigators lack. He reads project budgets, change
+                orders, and cost reports with the eye of someone trained
+                in both law and business.
+              </p>
+
+              <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
+                Over two decades of practice, Jeff has litigated and
+                arbitrated construction disputes for both owners and
+                contractors. He handles the full range of construction
+                conflicts — from payment disputes and delay claims to
+                defect litigation and contract interpretation issues.
               </p>
             </FadeIn>
 
