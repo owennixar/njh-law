@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 /* ------------------------------------------------------------------ */
 /*  Shared animation wrapper — subtle, not dramatic                    */
@@ -126,35 +125,12 @@ const partners = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: "Nixon Jach Hubbard recovered $2.3 million in retainage and delay damages on our mixed-use project when our previous counsel said the lien deadline had passed. Mike Nixon found the path forward and executed flawlessly.",
-    name: "David R. Thompson",
-    role: "President, Meridian Construction Group",
-  },
-  {
-    quote: "They reviewed every contract on our 14-story multifamily development and caught a pay-if-paid clause that would have exposed us to $800K in sub-tier liability. The contract review alone saved the project.",
-    name: "Sarah Chen",
-    role: "VP of Development, Lone Star Capital Partners",
-  },
-  {
-    quote: "When our business partner diverted $340,000 in client payments, NJH obtained a TRO within 24 hours and froze the accounts. They moved faster than any firm I have worked with in 20 years of commercial development.",
-    name: "James Whitfield",
-    role: "Managing Director, Whitfield Properties LLC",
-  },
-  {
-    quote: "We have used Nixon Jach Hubbard on every acquisition and lease negotiation across our DFW portfolio since 2016. Tony Jach understands the deal from the developer side \u2014 he does not just review documents, he improves the deal structure.",
-    name: "Patricia Morales",
-    role: "Principal, Ridgeway Realty Investors",
-  },
-];
+
 
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 export default function HomePage() {
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-
   return (
     <>
       {/* ============================================================ */}
@@ -436,64 +412,49 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* CLIENT TESTIMONIALS                                          */}
+      {/* TRUSTED BY                                                    */}
       {/* ============================================================ */}
       <section className="bg-charcoal-50 py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-7xl px-6 text-center">
           <FadeIn>
             <h2 className="font-heading text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
-              What our clients say
+              Trusted by contractors, developers, and property owners across the DFW metroplex
             </h2>
           </FadeIn>
 
-          {/* Desktop: 2-column grid */}
-          <div className="mt-14 hidden gap-6 md:grid md:grid-cols-2">
-            {testimonials.map((t, i) => (
-              <FadeIn key={t.name} delay={i * 0.05}>
-                <div className="rounded-lg border border-charcoal-200 bg-white p-8">
-                  <p className="text-sm leading-relaxed text-charcoal-600">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div className="mt-6 border-t border-charcoal-100 pt-4">
-                    <p className="text-sm font-semibold text-navy-900">{t.name}</p>
-                    <p className="mt-0.5 text-xs text-charcoal-400">{t.role}</p>
+          <FadeIn delay={0.1}>
+            <div className="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
+              {["Super Lawyers", "Best Lawyers in America", "Chambers USA"].map((label) => (
+                <div key={label} className="flex flex-col items-center gap-2 text-center">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-charcoal-200 bg-white">
+                    <svg className="h-5 w-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
+                    </svg>
                   </div>
+                  <span className="text-xs font-medium tracking-wide text-charcoal-500 uppercase">
+                    {label}
+                  </span>
                 </div>
-              </FadeIn>
-            ))}
-          </div>
-
-          {/* Mobile slider */}
-          <div className="mt-10 md:hidden">
-            <FadeIn>
-              <div className="rounded-lg border border-charcoal-200 bg-white p-8">
-                <p className="text-sm leading-relaxed text-charcoal-600">
-                  &ldquo;{testimonials[activeTestimonial].quote}&rdquo;
-                </p>
-                <div className="mt-6 border-t border-charcoal-100 pt-4">
-                  <p className="text-sm font-semibold text-navy-900">
-                    {testimonials[activeTestimonial].name}
-                  </p>
-                  <p className="mt-0.5 text-xs text-charcoal-400">
-                    {testimonials[activeTestimonial].role}
-                  </p>
+              ))}
+              {[
+                { label: "Super Lawyers", sub: "Mike Nixon, 2008\u20132024" },
+                { label: "Best Lawyers", sub: "Mike Nixon, 2019\u20132024" },
+                { label: "Chambers USA", sub: "Mike Nixon, 2020\u20132024" },
+              ].map((badge) => (
+                <div key={badge.sub} className="flex flex-col items-center gap-2 text-center">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-200 bg-gold-100">
+                    <svg className="h-5 w-5 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-xs font-medium tracking-wide text-charcoal-500 uppercase">
+                    {badge.label}
+                  </span>
+                  <span className="text-[10px] text-charcoal-400">{badge.sub}</span>
                 </div>
-              </div>
-              <div className="mt-4 flex justify-center gap-2">
-                {testimonials.map((_, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => setActiveTestimonial(i)}
-                    className={`h-2 w-2 rounded-full transition-colors ${
-                      i === activeTestimonial ? "bg-gold-400" : "bg-charcoal-300"
-                    }`}
-                    aria-label={`View testimonial ${i + 1}`}
-                  />
-                ))}
-              </div>
-            </FadeIn>
-          </div>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 
