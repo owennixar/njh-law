@@ -43,8 +43,8 @@ const personSchema = {
       postalCode: "75254",
     },
   },
-  telephone: "(972) 503-7000",
-  email: "jrusthoven@njhlaw.com",
+  telephone: "(972) 503-7006",
+  email: "jrusthoven@njh-law.com",
   knowsAbout: ["Construction Law", "Commercial Real Estate"],
 };
 
@@ -68,14 +68,14 @@ export default function JefferyRusthovenPage() {
               </h1>
               <p className="mt-1 text-lg text-white">Attorney</p>
               <div className="mt-4 flex flex-wrap gap-x-8 gap-y-1 text-sm text-charcoal-300">
-                <a href="tel:9725037000" className="hover:text-white">
-                  (972) 503-7000
+                <a href="tel:9725037006" className="hover:text-white">
+                  (972) 503-7006
                 </a>
                 <a
-                  href="mailto:jrusthoven@njhlaw.com"
+                  href="mailto:jrusthoven@njh-law.com"
                   className="hover:text-white"
                 >
-                  jrusthoven@njhlaw.com
+                  jrusthoven@njh-law.com
                 </a>
               </div>
               <div className="mt-6 flex gap-3">
@@ -145,9 +145,14 @@ export default function JefferyRusthovenPage() {
                 <h2 className="font-heading text-2xl font-bold text-white">
                   Speak with Jeff directly
                 </h2>
-                <p className="mt-1 text-sm text-charcoal-300">
-                  (972) 503-7000 &middot; jrusthoven@njhlaw.com
-                </p>
+                <div className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-sm text-charcoal-300">
+                  <a href="tel:9725037006" className="hover:text-white">
+                    (972) 503-7006
+                  </a>
+                  <a href="mailto:jrusthoven@njh-law.com" className="hover:text-white">
+                    jrusthoven@njh-law.com
+                  </a>
+                </div>
               </div>
               <Link
                 href="/contact"

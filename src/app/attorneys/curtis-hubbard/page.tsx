@@ -43,9 +43,9 @@ const personSchema = {
       postalCode: "75254",
     },
   },
-  telephone: "(972) 503-7000",
-  email: "chubbard@njhlaw.com",
-  knowsAbout: ["Business Litigation", "Commercial Transactions", "Corporate Law"],
+  telephone: "(972) 503-7004",
+  email: "chubbard@njh-law.com",
+  knowsAbout: ["Business Litigation", "Commercial Transactions"],
 };
 
 export default function CurtisHubbardPage() {
@@ -79,11 +79,11 @@ export default function CurtisHubbardPage() {
             </h1>
             <p className="mt-1 text-lg text-white">Partner</p>
             <div className="mt-4 flex justify-center gap-6 text-sm text-charcoal-300">
-              <a href="tel:9725037000" className="hover:text-white">
-                (972) 503-7000
+              <a href="tel:9725037004" className="hover:text-white">
+                (972) 503-7004
               </a>
-              <a href="mailto:chubbard@njhlaw.com" className="hover:text-white">
-                chubbard@njhlaw.com
+              <a href="mailto:chubbard@njh-law.com" className="hover:text-white">
+                chubbard@njh-law.com
               </a>
             </div>
             {/* Practice areas as tags */}
@@ -118,16 +118,7 @@ export default function CurtisHubbardPage() {
               corporate transactions across the DFW metroplex. His litigation
               practice focuses on breach of contract claims, partnership and
               shareholder disputes, fiduciary duty claims, and injunctive
-              relief under the Texas Civil Practice &amp; Remedies Code.
-            </p>
-
-            <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-              When a 50/50 partnership deadlocked over management decisions and
-              distribution rights, Curtis filed a receivership petition under
-              Texas Business Organizations Code &sect;11.314 and negotiated a
-              forced buy-out that preserved the operating company. That blend
-              of courtroom readiness and deal-making skill defines his approach
-              to business disputes.
+              relief.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
@@ -149,9 +140,14 @@ export default function CurtisHubbardPage() {
             <h2 className="font-heading text-2xl font-bold text-white">
               Speak with Curtis directly
             </h2>
-            <p className="mt-2 text-sm text-charcoal-300">
-              (972) 503-7000 &middot; chubbard@njhlaw.com
-            </p>
+            <div className="mt-2 flex justify-center gap-6 text-sm text-charcoal-300">
+              <a href="tel:9725037004" className="hover:text-white">
+                (972) 503-7004
+              </a>
+              <a href="mailto:chubbard@njh-law.com" className="hover:text-white">
+                chubbard@njh-law.com
+              </a>
+            </div>
             <div className="mt-6">
               <Link
                 href="/contact"

@@ -191,7 +191,7 @@ export default function HomePage() {
       {/* ============================================================ */}
       <section className="border-b border-charcoal-100 bg-white py-8 lg:py-10">
         <div className="overflow-hidden">
-          <div className="marquee-track">
+          <div className="marquee-track" aria-label="Recognition badges">
             {/* First set */}
             {[
               { src: "/images/badges/super-lawyers-badge.svg", alt: "Super Lawyers" },
@@ -199,13 +199,11 @@ export default function HomePage() {
               { src: "/images/badges/chambers-usa-badge.svg", alt: "Chambers USA" },
               { src: "/images/badges/best-law-firms-badge.svg", alt: "U.S. News Best Law Firms" },
             ].map((badge) => (
-              <Image
+              <img
                 key={badge.alt}
                 src={badge.src}
                 alt={badge.alt}
-                width={200}
-                height={120}
-                className="mx-[24px] h-[80px] w-auto shrink-0 object-contain sm:mx-[40px] sm:h-[120px]"
+                className="h-[80px] w-auto object-contain sm:h-[120px]"
               />
             ))}
             {/* Duplicate set for seamless loop */}
@@ -215,13 +213,11 @@ export default function HomePage() {
               { src: "/images/badges/chambers-usa-badge.svg", alt: "Chambers USA" },
               { src: "/images/badges/best-law-firms-badge.svg", alt: "U.S. News Best Law Firms" },
             ].map((badge) => (
-              <Image
+              <img
                 key={`dup-${badge.alt}`}
                 src={badge.src}
                 alt={badge.alt}
-                width={200}
-                height={120}
-                className="mx-[24px] h-[80px] w-auto shrink-0 object-contain sm:mx-[40px] sm:h-[120px]"
+                className="h-[80px] w-auto object-contain sm:h-[120px]"
               />
             ))}
           </div>

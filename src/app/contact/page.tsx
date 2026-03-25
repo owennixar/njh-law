@@ -61,17 +61,17 @@ const practiceOptions = [
 ];
 
 const attorneys = [
-  { name: "Michael S. Nixon", email: "mnixon@njhlaw.com", title: "Partner" },
-  { name: "Anthony P. Jach", email: "tjach@njhlaw.com", title: "Partner" },
-  { name: "Curtis Hubbard", email: "chubbard@njhlaw.com", title: "Partner" },
+  { name: "Michael S. Nixon", email: "mnixon@njh-law.com", title: "Partner" },
+  { name: "Anthony P. Jach", email: "tjach@njh-law.com", title: "Partner" },
+  { name: "Curtis Hubbard", email: "chubbard@njh-law.com", title: "Partner" },
   {
     name: "Jeffery H. Rusthoven",
-    email: "jrusthoven@njhlaw.com",
+    email: "jrusthoven@njh-law.com",
     title: "Attorney",
   },
   {
     name: "Anthony R. Alvarado",
-    email: "aalvarado@njhlaw.com",
+    email: "aalvarado@njh-law.com",
     title: "Attorney",
   },
 ];

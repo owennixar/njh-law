@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Script from "next/script";
 
@@ -43,12 +42,11 @@ const personSchema = {
       postalCode: "75254",
     },
   },
-  telephone: "(972) 503-7000",
-  email: "aalvarado@njhlaw.com",
+  telephone: "(972) 503-7007",
+  email: "aalvarado@njh-law.com",
   knowsAbout: [
     "Business Litigation",
     "Corporate Transactions",
-    "Entity Formation",
   ],
 };
 
@@ -66,7 +64,7 @@ export default function AnthonyAlvaradoPage() {
       <section className="bg-navy-950">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid lg:grid-cols-2">
-            {/* Dark side — photo */}
+            {/* Dark side — photo placeholder */}
             <FadeIn>
               <div className="flex items-end py-16 lg:py-28">
                 <div className="flex aspect-[4/5] w-full max-w-xs items-center justify-center rounded-lg bg-navy-800">
@@ -82,14 +80,14 @@ export default function AnthonyAlvaradoPage() {
                 </h1>
                 <p className="mt-1 text-lg text-white">Attorney</p>
                 <div className="mt-4 flex flex-wrap gap-x-8 gap-y-1 text-sm text-charcoal-300">
-                  <a href="tel:9725037000" className="hover:text-white">
-                    (972) 503-7000
+                  <a href="tel:9725037007" className="hover:text-white">
+                    (972) 503-7007
                   </a>
                   <a
-                    href="mailto:aalvarado@njhlaw.com"
+                    href="mailto:aalvarado@njh-law.com"
                     className="hover:text-white"
                   >
-                    aalvarado@njhlaw.com
+                    aalvarado@njh-law.com
                   </a>
                 </div>
                 <div className="mt-6 flex gap-3">
@@ -124,17 +122,15 @@ export default function AnthonyAlvaradoPage() {
               Anthony Alvarado represents businesses in commercial disputes
               and corporate matters across the DFW metroplex. His litigation
               practice covers breach of contract claims, partnership disputes,
-              non-compete enforcement, and injunctive relief under the Texas
-              Civil Practice &amp; Remedies Code.
+              non-compete enforcement, and injunctive relief.
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-              His corporate work includes LLC and corporation formation under
-              the Texas Business Organizations Code, operating agreement
-              drafting, shareholder agreements, and commercial contract
-              negotiation. Anthony works with the firm&apos;s partners on
-              complex multi-party litigation and entity structuring for
-              construction and real estate companies.
+              His corporate work includes LLC and corporation formation,
+              operating agreement drafting, shareholder agreements, and
+              commercial contract negotiation. Anthony works with the
+              firm&apos;s partners on complex multi-party litigation and
+              entity structuring for construction and real estate companies.
             </p>
           </FadeIn>
         </div>
@@ -149,9 +145,14 @@ export default function AnthonyAlvaradoPage() {
                 <h2 className="font-heading text-2xl font-bold text-white">
                   Speak with Anthony directly
                 </h2>
-                <p className="mt-1 text-sm text-charcoal-300">
-                  (972) 503-7000 &middot; aalvarado@njhlaw.com
-                </p>
+                <div className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-sm text-charcoal-300">
+                  <a href="tel:9725037007" className="hover:text-white">
+                    (972) 503-7007
+                  </a>
+                  <a href="mailto:aalvarado@njh-law.com" className="hover:text-white">
+                    aalvarado@njh-law.com
+                  </a>
+                </div>
               </div>
               <Link
                 href="/contact"

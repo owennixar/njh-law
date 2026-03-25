@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "Dallas Business Law Firm | Nixon Jach Hubbard | Construction & Real Estate Attorneys",
   description:
     "Dallas business law firm with 30+ years in construction law, commercial real estate, business litigation, and corporate transactions. Recognized by Chambers USA and Best Lawyers.",
-  metadataBase: new URL("https://njhlaw.com"),
+  metadataBase: new URL("https://njh-law.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -38,10 +38,10 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "LegalService",
   name: "Nixon Jach Hubbard",
-  url: "https://njhlaw.com",
+  url: "https://njh-law.com",
   telephone: "(972) 503-7000",
   faxNumber: "(972) 503-7001",
-  email: "info@njhlaw.com",
+  email: "info@njh-law.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "14241 Dallas Parkway, Suite 575",

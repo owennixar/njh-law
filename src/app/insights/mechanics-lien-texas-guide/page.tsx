@@ -60,7 +60,7 @@ const articleSchema = {
     "@type": "Person",
     name: "Michael S. Nixon",
     jobTitle: "Partner",
-    url: "https://njhlaw.com/attorneys/michael-nixon",
+    url: "https://njh-law.com/attorneys/michael-nixon",
   },
   publisher: {
     "@type": "LegalService",
@@ -69,7 +69,7 @@ const articleSchema = {
   datePublished: "2026-03-24",
   dateModified: "2026-03-24",
   mainEntityOfPage:
-    "https://njhlaw.com/insights/mechanics-lien-texas-guide",
+    "https://njh-law.com/insights/mechanics-lien-texas-guide",
 };
 
 export default function MechanicsLienGuidePage() {

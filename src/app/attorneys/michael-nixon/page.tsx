@@ -43,9 +43,9 @@ const personSchema = {
       postalCode: "75254",
     },
   },
-  telephone: "(972) 503-7000",
-  email: "mnixon@njhlaw.com",
-  url: "https://njhlaw.com/attorneys/michael-nixon",
+  telephone: "(972) 503-7002",
+  email: "mnixon@njh-law.com",
+  url: "https://njh-law.com/attorneys/michael-nixon",
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Louisiana State University" },
     { "@type": "CollegeOrUniversity", name: "Baylor University School of Law" },
@@ -75,7 +75,7 @@ export default function MichaelNixonPage() {
       <section className="bg-navy-950 py-24 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid items-end gap-12 lg:grid-cols-12">
-            {/* Photo placeholder — offset left */}
+            {/* Photo — offset left */}
             <FadeIn className="lg:col-span-4">
               <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
                 <Image
@@ -98,16 +98,16 @@ export default function MichaelNixonPage() {
 
               <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-charcoal-300">
                 <a
-                  href="tel:9725037000"
+                  href="tel:9725037002"
                   className="transition-colors hover:text-white"
                 >
-                  (972) 503-7000
+                  (972) 503-7002
                 </a>
                 <a
-                  href="mailto:mnixon@njhlaw.com"
+                  href="mailto:mnixon@njh-law.com"
                   className="transition-colors hover:text-white"
                 >
-                  mnixon@njhlaw.com
+                  mnixon@njh-law.com
                 </a>
               </div>
 
@@ -143,22 +143,22 @@ export default function MichaelNixonPage() {
               </h2>
 
               <p className="mt-6 text-sm leading-relaxed text-charcoal-600">
-                Michael Nixon has represented general contractors, subcontractors,
-                material suppliers, sureties, developers, and property owners in
-                construction disputes since 1988. His practice spans every phase
-                of a construction project — from contract negotiation and bid
-                protests through mechanic&apos;s lien claims, delay litigation,
-                and final payment disputes.
+                Michael Nixon has successfully helped hundreds of clients explore
+                practical options and favorable solutions to complex real estate
+                and construction-related disputes. Recognized by numerous
+                publications and by his peers as one of the top construction
+                attorneys in Texas for the past 20 years, Mike brings deep
+                experience to every matter.
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
-                When a $12M mixed-use project in North Texas stalled over
-                competing delay claims, Mike reconstructed the CPM schedule,
-                identified 47 owner-directed changes, and negotiated a
-                resolution that kept the GC whole without shutting down the job
-                site. That combination — deep knowledge of the Texas Property
-                Code and practical understanding of how projects actually run —
-                is what sets his practice apart.
+                He has successfully litigated and arbitrated numerous
+                construction-related disputes and handled a variety of legal
+                issues for developers and commercial contractors in both public
+                and private work. His practice spans every phase of a
+                construction project — from contract negotiation and bid
+                protests through mechanic&apos;s lien claims, delay litigation,
+                and final payment disputes.
               </p>
 
               <p className="mt-4 text-sm leading-relaxed text-charcoal-600">
@@ -174,11 +174,7 @@ export default function MichaelNixonPage() {
                 Mike also handles commercial real estate disputes where
                 construction and property interests overlap — developer-contractor
                 conflicts, construction defect claims on completed buildings,
-                and lien foreclosure actions. His recognition by Chambers USA
-                for Construction (2020–2024), Best Lawyers in America for
-                Construction Litigation (2019–2024), and Texas Super Lawyers
-                for Construction Litigation (2008, 2010–2024) reflects the
-                breadth and consistency of that work.
+                and lien foreclosure actions.
               </p>
             </FadeIn>
 
@@ -227,16 +223,18 @@ export default function MichaelNixonPage() {
                   <div>
                     <dt className="text-charcoal-400">Education</dt>
                     <dd className="font-medium text-navy-900">
-                      Baylor University School of Law
+                      Baylor University &ndash; J.D.
                     </dd>
                     <dd className="font-medium text-navy-900">
-                      Louisiana State University
+                      Louisiana State University &ndash; B.S.
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-charcoal-400">Super Lawyers</dt>
+                    <dt className="text-charcoal-400">Direct Line</dt>
                     <dd className="font-medium text-navy-900">
-                      16 consecutive years
+                      <a href="tel:9725037002" className="hover:text-gold-600">
+                        (972) 503-7002
+                      </a>
                     </dd>
                   </div>
                 </dl>
@@ -263,12 +261,12 @@ export default function MichaelNixonPage() {
                 Bar Admissions
               </h3>
               <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
-                <li>State Bar of Texas (1988)</li>
+                <li>State Bar of Texas &ndash; 1988</li>
                 <li>U.S. District Court, Northern District of Texas</li>
                 <li>U.S. District Court, Southern District of Texas</li>
                 <li>U.S. District Court, Eastern District of Texas</li>
                 <li>U.S. District Court, Western District of Texas</li>
-                <li>U.S. Court of Appeals, Fifth Circuit</li>
+                <li>U.S. Court of Appeals &ndash; Fifth Circuit</li>
               </ul>
             </FadeIn>
 
@@ -278,10 +276,10 @@ export default function MichaelNixonPage() {
               </h3>
               <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
                 <li>
-                  <strong>J.D.</strong>, Baylor University School of Law
+                  <strong>J.D.</strong>, Baylor University
                 </li>
                 <li>
-                  <strong>B.A.</strong>, Louisiana State University
+                  <strong>B.S.</strong>, Louisiana State University
                 </li>
               </ul>
             </FadeIn>
@@ -291,11 +289,18 @@ export default function MichaelNixonPage() {
                 Professional Memberships
               </h3>
               <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
-                <li>Dallas Bar Association</li>
                 <li>
-                  American Bar Association — Forum on Construction Industry
+                  Dallas Bar Association &ndash; Real Property Law Section,
+                  Construction Law Section, Business Litigation Section
                 </li>
-                <li>State Bar of Texas — Construction Law Section</li>
+                <li>
+                  State Bar of Texas &ndash; Real Estate Section,
+                  Construction Law Section, Business Litigation Section
+                </li>
+                <li>
+                  American Bar Association &ndash; Forum on the Construction
+                  Industry
+                </li>
               </ul>
             </FadeIn>
 
@@ -305,13 +310,19 @@ export default function MichaelNixonPage() {
               </h3>
               <ul className="mt-4 space-y-2 text-sm text-charcoal-600">
                 <li>
-                  Texas Super Lawyers, Construction Litigation (2008,
-                  2010–2024)
+                  Selected for inclusion in Texas Super Lawyers &ndash;
+                  Construction Litigation, &ldquo;Texas Super Lawyers&rdquo;
+                  (Thomson Reuters) 2008, 2010&ndash;2024
                 </li>
                 <li>
-                  Best Lawyers in America, Construction Litigation (2019–2024)
+                  Selected by &ldquo;Best Lawyers&rdquo; in America &ndash;
+                  Litigation &ndash; Construction, 2019&ndash;2024
                 </li>
-                <li>Chambers USA, Construction (2020–2024)</li>
+                <li>
+                  Chambers USA &ndash; America&apos;s Leading Lawyers for
+                  Business, Texas Construction, Chambers &amp; Partners
+                  (2020&ndash;2024)
+                </li>
               </ul>
             </FadeIn>
           </div>
@@ -331,16 +342,16 @@ export default function MichaelNixonPage() {
                 </h2>
                 <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm text-charcoal-300">
                   <a
-                    href="tel:9725037000"
+                    href="tel:9725037002"
                     className="transition-colors hover:text-white"
                   >
-                    (972) 503-7000
+                    (972) 503-7002
                   </a>
                   <a
-                    href="mailto:mnixon@njhlaw.com"
+                    href="mailto:mnixon@njh-law.com"
                     className="transition-colors hover:text-white"
                   >
-                    mnixon@njhlaw.com
+                    mnixon@njh-law.com
                   </a>
                 </div>
               </div>

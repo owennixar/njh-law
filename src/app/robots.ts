@@ -28,6 +28,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://njhlaw.com/sitemap.xml",
+    sitemap: "https://njh-law.com/sitemap.xml",
   };
 }
