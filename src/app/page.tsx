@@ -200,23 +200,20 @@ export default function HomePage() {
       {/* ============================================================ */}
       <section className="border-b border-charcoal-100 bg-white py-10 lg:py-12">
         <div className="mx-auto max-w-7xl px-6">
-          <p className="mb-4 text-center text-xs font-medium tracking-wider text-charcoal-400 uppercase">
-            Our attorneys are recognized by
-          </p>
           <div
-            className="flex flex-wrap items-center justify-center gap-4"
+            className="flex flex-nowrap items-center justify-center gap-3"
             aria-label="Attorney recognition and awards"
           >
             {[
-              "Super Lawyers (2008–2024)",
-              "Best Lawyers in America (2019–2024)",
-              "Chambers USA (2020–2024)",
-              "Martindale-Hubbell AV Preeminent",
-              "Best Law Firms – Tier 1 Dallas",
+              "Super Lawyers",
+              "Best Lawyers",
+              "Chambers USA",
+              "AV Preeminent",
+              "Best Law Firms",
             ].map((award) => (
               <span
                 key={award}
-                className="inline-block whitespace-nowrap rounded-full border border-navy-900 px-8 py-4 text-base font-medium text-navy-900"
+                className="whitespace-nowrap rounded-full border border-navy-900 px-5 py-4 text-[13px] font-medium text-navy-900"
               >
                 {award}
               </span>
