@@ -123,6 +123,14 @@ const partners = [
     photo: "/images/curtis_hubbard.avif",
     recognitions: "",
   },
+  {
+    name: "Jeff Rusthoven",
+    title: "Partner",
+    focus: "Construction Law & Commercial Real Estate",
+    slug: "jeffery-rusthoven",
+    photo: "/images/jeff_rusthoven.avif",
+    recognitions: "",
+  },
 ];
 
 
@@ -373,19 +381,19 @@ export default function HomePage() {
             </p>
           </FadeIn>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {partners.map((attorney, i) => (
               <FadeIn key={attorney.slug} delay={i * 0.05}>
                 <Link
                   href={`/attorneys/${attorney.slug}`}
-                  className="card-hover group block rounded-lg border border-charcoal-200 p-6"
+                  className="card-hover group flex h-full flex-col rounded-lg border border-charcoal-200 p-6"
                 >
                   <div className="relative aspect-[4/5] overflow-hidden rounded bg-charcoal-100">
                     <Image
                       src={attorney.photo}
                       alt={`${attorney.name}, Dallas construction and business attorney`}
                       fill
-                      className="object-cover"
+                      className="object-cover object-top"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
