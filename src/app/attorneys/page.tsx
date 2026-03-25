@@ -106,7 +106,7 @@ export default function AttorneysPage() {
           {/* Uniform grid: 3 cols for partners, then 2 remaining below */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {attorneys.map((attorney, i) => (
-              <FadeIn key={attorney.slug} delay={i * 0.08}>
+              <FadeIn key={attorney.slug} delay={i * 0.08} className="h-full">
                 <Link
                   href={`/attorneys/${attorney.slug}`}
                   className="group block h-full rounded-lg border border-charcoal-200 transition-colors hover:border-navy-600"

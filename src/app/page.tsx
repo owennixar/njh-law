@@ -383,7 +383,7 @@ export default function HomePage() {
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {partners.map((attorney, i) => (
-              <FadeIn key={attorney.slug} delay={i * 0.05}>
+              <FadeIn key={attorney.slug} delay={i * 0.05} className="h-full">
                 <Link
                   href={`/attorneys/${attorney.slug}`}
                   className="card-hover group flex h-full flex-col rounded-lg border border-charcoal-200 p-6"
