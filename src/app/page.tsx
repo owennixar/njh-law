@@ -156,7 +156,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="relative mx-auto w-full max-w-7xl px-6 py-20 sm:py-28 lg:py-36">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-20 sm:py-28 lg:py-36">
           <div className="max-w-2xl lg:max-w-[50%]">
             <FadeIn>
               <p className="tagline text-xs text-charcoal-300 sm:text-sm">
@@ -198,31 +198,29 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* RECOGNITION — clean text pills                               */}
       {/* ============================================================ */}
-      <section className="border-b border-charcoal-100 bg-white py-8 lg:py-10">
+      <section className="border-b border-charcoal-100 bg-white py-10 lg:py-12">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-center gap-4">
-            <p className="font-heading text-sm font-bold text-navy-900 lg:text-base">
-              Our attorneys are recognized&nbsp;by:
-            </p>
-            <div
-              className="flex flex-wrap items-center justify-center gap-3"
-              aria-label="Attorney recognition and awards"
-            >
-              {[
-                "Super Lawyers (2008–2024)",
-                "Best Lawyers (2019–2024)",
-                "Chambers USA (2020–2024)",
-                "AV Preeminent",
-                "Best Law Firms – Tier 1",
-              ].map((award) => (
-                <span
-                  key={award}
-                  className="inline-block whitespace-nowrap rounded-full border border-charcoal-200 px-4 py-1.5 text-xs font-medium text-navy-900"
-                >
-                  {award}
-                </span>
-              ))}
-            </div>
+          <p className="mb-4 text-center text-xs font-medium tracking-wider text-charcoal-400 uppercase">
+            Our attorneys are recognized by
+          </p>
+          <div
+            className="flex flex-wrap items-center justify-center gap-4"
+            aria-label="Attorney recognition and awards"
+          >
+            {[
+              "Super Lawyers (2008–2024)",
+              "Best Lawyers in America (2019–2024)",
+              "Chambers USA (2020–2024)",
+              "Martindale-Hubbell AV Preeminent",
+              "Best Law Firms – Tier 1 Dallas",
+            ].map((award) => (
+              <span
+                key={award}
+                className="inline-block whitespace-nowrap rounded-full border border-navy-900 px-8 py-4 text-base font-medium text-navy-900"
+              >
+                {award}
+              </span>
+            ))}
           </div>
         </div>
       </section>
