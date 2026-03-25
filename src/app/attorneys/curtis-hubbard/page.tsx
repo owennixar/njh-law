@@ -110,12 +110,6 @@ export default function CurtisHubbardPage() {
                 </a>
               </div>
 
-              {/* Accomplishment badge images */}
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
-                <img src="/images/Badges/curtis/super-lawyer.avif" alt="Curtis Hubbard – Texas Super Lawyer" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-                <img src="/images/Badges/curtis/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-              </div>
-
               {/* Recognition badges */}
               <div className="mt-6 flex flex-wrap gap-3">
                 {[
@@ -131,6 +125,18 @@ export default function CurtisHubbardPage() {
                 ))}
               </div>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* BADGE IMAGES — white background, fully visible               */}
+      {/* ============================================================ */}
+      <section className="bg-white py-10">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <img src="/images/Badges/curtis/super-lawyer.avif" alt="Curtis Hubbard – Texas Super Lawyer" className="h-[90px] w-auto object-contain" />
+            <img src="/images/Badges/curtis/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[90px] w-auto object-contain" />
           </div>
         </div>
       </section>

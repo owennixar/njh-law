@@ -110,13 +110,6 @@ export default function AnthonyJachPage() {
                 </a>
               </div>
 
-              {/* Accomplishment badge images */}
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
-                <img src="/images/Badges/tony/super-lawyer.avif" alt="Tony Jach – Texas Super Lawyer" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-                <img src="/images/Badges/tony/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-                <img src="/images/Badges/tony/martindale-hubbell.avif" alt="Martindale-Hubbell AV Preeminent" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-              </div>
-
               {/* Recognition badges */}
               <div className="mt-6 flex flex-wrap gap-3">
                 {[
@@ -133,6 +126,19 @@ export default function AnthonyJachPage() {
                 ))}
               </div>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* BADGE IMAGES — white background, fully visible               */}
+      {/* ============================================================ */}
+      <section className="bg-white py-10">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <img src="/images/Badges/tony/super-lawyer.avif" alt="Tony Jach – Texas Super Lawyer" className="h-[90px] w-auto object-contain" />
+            <img src="/images/Badges/tony/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[90px] w-auto object-contain" />
+            <img src="/images/Badges/tony/martindale-hubbell.avif" alt="Martindale-Hubbell AV Preeminent" className="h-[90px] w-auto object-contain" />
           </div>
         </div>
       </section>

@@ -191,33 +191,32 @@ export default function HomePage() {
       {/* ============================================================ */}
       <section className="border-b border-charcoal-100 bg-white py-8 lg:py-10">
         <div className="mx-auto max-w-5xl px-6">
+          <p className="mb-6 text-center font-heading text-sm tracking-wide text-charcoal-400">
+            Our attorneys are recognized by:
+          </p>
           <div
             className="grid grid-cols-2 items-center justify-items-center gap-8 sm:grid-cols-4"
             aria-label="Recognition badges"
           >
             <img
-              src="/images/Badges/Super Lawyers.png"
+              src="/images/Badges/Super%20Lawyers.png"
               alt="Super Lawyers"
               className="h-[100px] w-auto object-contain lg:h-[120px]"
-              style={{ mixBlendMode: "multiply" }}
             />
             <img
-              src="/images/Badges/Best Lawyers.avif"
+              src="/images/Badges/Best%20Lawyers.avif"
               alt="Best Lawyers in America"
               className="h-[100px] w-auto object-contain lg:h-[120px]"
-              style={{ mixBlendMode: "multiply" }}
             />
             <img
-              src="/images/Badges/chambers USA.avif"
+              src="/images/Badges/chambers%20USA.avif"
               alt="Chambers USA"
               className="h-[100px] w-auto object-contain lg:h-[120px]"
-              style={{ mixBlendMode: "multiply" }}
             />
             <img
-              src="/images/Badges/Martindale Hubbard .avif"
+              src="/images/Badges/Martindale%20Hubbard%20.avif"
               alt="Martindale-Hubbell"
               className="h-[100px] w-auto object-contain lg:h-[120px]"
-              style={{ mixBlendMode: "multiply" }}
             />
           </div>
         </div>
