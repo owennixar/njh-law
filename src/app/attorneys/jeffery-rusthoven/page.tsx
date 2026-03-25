@@ -113,8 +113,8 @@ export default function JefferyRusthovenPage() {
 
               {/* Accomplishment badge images */}
               <div className="mt-8 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
-                <img src="/images/badges/jeff/board-certified.avif" alt="Jeffery Rusthoven – Board Certified Construction Law" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-                <img src="/images/badges/jeff/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/Badges/jeff/board-certified.avif" alt="Jeffery Rusthoven – Board Certified Construction Law" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/Badges/jeff/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
               </div>
 
               {/* Recognition badges */}

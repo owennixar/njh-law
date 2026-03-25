@@ -196,25 +196,25 @@ export default function HomePage() {
             aria-label="Recognition badges"
           >
             <img
-              src="/images/badges/Super Lawyers.png"
+              src="/images/Badges/Super Lawyers.png"
               alt="Super Lawyers"
               className="h-[100px] w-auto object-contain lg:h-[120px]"
               style={{ mixBlendMode: "multiply" }}
             />
             <img
-              src="/images/badges/Best Lawyers.avif"
+              src="/images/Badges/Best Lawyers.avif"
               alt="Best Lawyers in America"
               className="h-[100px] w-auto object-contain lg:h-[120px]"
               style={{ mixBlendMode: "multiply" }}
             />
             <img
-              src="/images/badges/chambers USA.avif"
+              src="/images/Badges/chambers USA.avif"
               alt="Chambers USA"
               className="h-[100px] w-auto object-contain lg:h-[120px]"
               style={{ mixBlendMode: "multiply" }}
             />
             <img
-              src="/images/badges/Martindale Hubbard .avif"
+              src="/images/Badges/Martindale Hubbard .avif"
               alt="Martindale-Hubbell"
               className="h-[100px] w-auto object-contain lg:h-[120px]"
               style={{ mixBlendMode: "multiply" }}

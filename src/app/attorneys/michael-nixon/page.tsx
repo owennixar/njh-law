@@ -113,9 +113,9 @@ export default function MichaelNixonPage() {
 
               {/* Accomplishment badge images */}
               <div className="mt-8 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
-                <img src="/images/badges/mike/super-lawyer.avif" alt="Michael Nixon – Texas Super Lawyer" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-                <img src="/images/badges/mike/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-                <img src="/images/badges/mike/martindale-hubbell.avif" alt="Martindale-Hubbell Rating" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/Badges/mike/super-lawyer.avif" alt="Michael Nixon – Texas Super Lawyer" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/Badges/mike/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/Badges/mike/martindale-hubbell.avif" alt="Martindale-Hubbell Rating" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
               </div>
 
               {/* Recognition badges */}

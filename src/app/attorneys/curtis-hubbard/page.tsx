@@ -112,8 +112,8 @@ export default function CurtisHubbardPage() {
 
               {/* Accomplishment badge images */}
               <div className="mt-8 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
-                <img src="/images/badges/curtis/super-lawyer.avif" alt="Curtis Hubbard – Texas Super Lawyer" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
-                <img src="/images/badges/curtis/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/Badges/curtis/super-lawyer.avif" alt="Curtis Hubbard – Texas Super Lawyer" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/Badges/curtis/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
               </div>
 
               {/* Recognition badges */}
