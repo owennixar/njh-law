@@ -136,19 +136,41 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* HERO — clean, confident, understated                         */}
       {/* ============================================================ */}
-      <section className="relative overflow-hidden bg-navy-950 py-20 sm:py-28 lg:py-36">
+      <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-navy-950">
+        {/* Video background — desktop only */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="pointer-events-none absolute inset-0 hidden h-full w-full object-cover md:block"
+          aria-hidden="true"
+        >
+          <source src="/videos/dallas-skyline.mp4" type="video/mp4" />
+        </video>
+
+        {/* Static fallback — mobile (saves bandwidth) */}
         <Image
           src="/images/dallas-skyline.jpg"
           alt="Dallas commercial skyline representing the construction and business law practice of Nixon Jach Hubbard"
           fill
-          className="object-cover object-center opacity-30"
+          className="object-cover object-center md:hidden"
           priority
           quality={80}
         />
-        <div className="absolute inset-0 bg-navy-950/70" />
 
-        <div className="relative mx-auto max-w-7xl px-6">
-          <div className="max-w-2xl">
+        {/* Dark gradient overlay — left-to-right */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(10,20,40,0.85) 0%, rgba(10,20,40,0.85) 35%, rgba(10,20,40,0.4) 60%, transparent 100%)",
+          }}
+        />
+
+        <div className="relative mx-auto w-full max-w-7xl px-6 py-20 sm:py-28 lg:py-36">
+          <div className="max-w-2xl lg:max-w-[50%]">
             <FadeIn>
               <p className="tagline text-xs text-charcoal-300 sm:text-sm">
                 Contract. Construct. Resolve.
