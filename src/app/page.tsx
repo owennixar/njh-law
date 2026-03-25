@@ -209,38 +209,32 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* RECOGNITION BADGES — static row                              */}
+      {/* RECOGNITION — clean text pills                               */}
       {/* ============================================================ */}
       <section className="border-b border-charcoal-100 bg-white py-8 lg:py-10">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-center lg:gap-10">
+          <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-start lg:gap-10">
             <p className="shrink-0 font-heading text-base font-bold text-navy-900 lg:text-lg">
-              Our attorneys are recognized by:
+              Our attorneys are recognized&nbsp;by:
             </p>
             <div
-              className="flex flex-wrap items-center justify-center gap-8 lg:flex-1 lg:justify-evenly"
-              aria-label="Recognition badges"
+              className="flex flex-wrap items-center justify-center gap-3 lg:flex-1 lg:justify-start"
+              aria-label="Attorney recognition and awards"
             >
-              <img
-                src="/images/Badges/Super%20Lawyers.png"
-                alt="Super Lawyers"
-                className="h-[80px] w-auto object-contain lg:h-[100px]"
-              />
-              <img
-                src="/images/Badges/Best%20Lawyers.avif"
-                alt="Best Lawyers in America"
-                className="h-[80px] w-auto object-contain lg:h-[100px]"
-              />
-              <img
-                src="/images/Badges/chambers%20USA.avif"
-                alt="Chambers USA"
-                className="h-[80px] w-auto object-contain lg:h-[100px]"
-              />
-              <img
-                src="/images/Badges/Martindale%20Hubbard%20.avif"
-                alt="Martindale-Hubbell"
-                className="h-[80px] w-auto object-contain lg:h-[100px]"
-              />
+              {[
+                "Texas Super Lawyers (2008–2024)",
+                "Best Lawyers in America (2019–2024)",
+                "Chambers USA Construction (2020–2024)",
+                "Martindale-Hubbell AV Preeminent",
+                "Best Law Firms – Tier 1 Dallas Construction",
+              ].map((award) => (
+                <span
+                  key={award}
+                  className="inline-block rounded-full border border-charcoal-200 px-4 py-1.5 text-sm font-medium text-navy-900"
+                >
+                  {award}
+                </span>
+              ))}
             </div>
           </div>
         </div>
