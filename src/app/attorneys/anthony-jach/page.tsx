@@ -110,8 +110,15 @@ export default function AnthonyJachPage() {
                 </a>
               </div>
 
+              {/* Accomplishment badge images */}
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
+                <img src="/images/badges/tony/super-lawyer.avif" alt="Tony Jach – Texas Super Lawyer" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/badges/tony/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/badges/tony/martindale-hubbell.avif" alt="Martindale-Hubbell AV Preeminent" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+              </div>
+
               {/* Recognition badges */}
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-3">
                 {[
                   "Chambers USA Construction 2021\u20132024",
                   "Texas Super Lawyers 2010\u20132024",

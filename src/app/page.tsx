@@ -187,39 +187,38 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* RECOGNITION BADGES — infinite scrolling marquee               */}
+      {/* RECOGNITION BADGES — static row                              */}
       {/* ============================================================ */}
       <section className="border-b border-charcoal-100 bg-white py-8 lg:py-10">
-        <div className="overflow-hidden">
-          <div className="marquee-track" aria-label="Recognition badges">
-            {/* First set */}
-            {[
-              { src: "/images/badges/super-lawyers-badge.svg", alt: "Super Lawyers" },
-              { src: "/images/badges/best-lawyers-badge.svg", alt: "Best Lawyers in America" },
-              { src: "/images/badges/chambers-usa-badge.svg", alt: "Chambers USA" },
-              { src: "/images/badges/best-law-firms-badge.svg", alt: "U.S. News Best Law Firms" },
-            ].map((badge) => (
-              <img
-                key={badge.alt}
-                src={badge.src}
-                alt={badge.alt}
-                className="h-[80px] w-auto object-contain sm:h-[120px]"
-              />
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {[
-              { src: "/images/badges/super-lawyers-badge.svg", alt: "Super Lawyers" },
-              { src: "/images/badges/best-lawyers-badge.svg", alt: "Best Lawyers in America" },
-              { src: "/images/badges/chambers-usa-badge.svg", alt: "Chambers USA" },
-              { src: "/images/badges/best-law-firms-badge.svg", alt: "U.S. News Best Law Firms" },
-            ].map((badge) => (
-              <img
-                key={`dup-${badge.alt}`}
-                src={badge.src}
-                alt={badge.alt}
-                className="h-[80px] w-auto object-contain sm:h-[120px]"
-              />
-            ))}
+        <div className="mx-auto max-w-5xl px-6">
+          <div
+            className="grid grid-cols-2 items-center justify-items-center gap-8 sm:grid-cols-4"
+            aria-label="Recognition badges"
+          >
+            <img
+              src="/images/badges/Super Lawyers.png"
+              alt="Super Lawyers"
+              className="h-[100px] w-auto object-contain lg:h-[120px]"
+              style={{ mixBlendMode: "multiply" }}
+            />
+            <img
+              src="/images/badges/Best Lawyers.avif"
+              alt="Best Lawyers in America"
+              className="h-[100px] w-auto object-contain lg:h-[120px]"
+              style={{ mixBlendMode: "multiply" }}
+            />
+            <img
+              src="/images/badges/chambers USA.avif"
+              alt="Chambers USA"
+              className="h-[100px] w-auto object-contain lg:h-[120px]"
+              style={{ mixBlendMode: "multiply" }}
+            />
+            <img
+              src="/images/badges/Martindale Hubbard .avif"
+              alt="Martindale-Hubbell"
+              className="h-[100px] w-auto object-contain lg:h-[120px]"
+              style={{ mixBlendMode: "multiply" }}
+            />
           </div>
         </div>
       </section>

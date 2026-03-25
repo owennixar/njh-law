@@ -111,8 +111,15 @@ export default function MichaelNixonPage() {
                 </a>
               </div>
 
+              {/* Accomplishment badge images */}
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-6 lg:justify-start">
+                <img src="/images/badges/mike/super-lawyer.avif" alt="Michael Nixon – Texas Super Lawyer" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/badges/mike/best-law-firms.avif" alt="Best Law Firms – Regional Tier 1" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+                <img src="/images/badges/mike/martindale-hubbell.avif" alt="Martindale-Hubbell Rating" className="h-[100px] w-auto object-contain" style={{ mixBlendMode: "multiply" }} />
+              </div>
+
               {/* Recognition badges */}
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-3">
                 {[
                   "Texas Super Lawyers 2008, 2010\u20132024",
                   "Best Lawyers in America 2019\u20132024",
