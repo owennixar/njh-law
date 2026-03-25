@@ -187,45 +187,44 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* RECOGNITION BADGE GRID — static, not scrolling               */}
+      {/* RECOGNITION BADGES — infinite scrolling marquee               */}
       {/* ============================================================ */}
-      <section className="border-b border-charcoal-100 bg-white py-10 lg:py-12">
-        <div className="mx-auto max-w-7xl px-6">
-          <FadeIn>
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
-              {/* Firm-level badges */}
-              {["Super Lawyers", "Best Lawyers in America", "Chambers USA"].map((label) => (
-                <div key={label} className="flex flex-col items-center gap-2 text-center">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-charcoal-200 bg-charcoal-50">
-                    <svg className="h-5 w-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-xs font-medium tracking-wide text-charcoal-500 uppercase">
-                    {label}
-                  </span>
-                </div>
-              ))}
-              {/* Attorney-specific badges */}
-              {[
-                { label: "Super Lawyers", sub: "Mike Nixon, 2008\u20132024" },
-                { label: "Best Lawyers", sub: "Mike Nixon, 2019\u20132024" },
-                { label: "Chambers USA", sub: "Mike Nixon, 2020\u20132024" },
-              ].map((badge) => (
-                <div key={badge.sub} className="flex flex-col items-center gap-2 text-center">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-200 bg-gold-100">
-                    <svg className="h-5 w-5 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-xs font-medium tracking-wide text-charcoal-500 uppercase">
-                    {badge.label}
-                  </span>
-                  <span className="text-[10px] text-charcoal-400">{badge.sub}</span>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
+      <section className="border-b border-charcoal-100 bg-white py-8 lg:py-10">
+        <div className="overflow-hidden">
+          <div className="marquee-track">
+            {/* First set */}
+            {[
+              { src: "/images/badges/super-lawyers-badge.svg", alt: "Super Lawyers" },
+              { src: "/images/badges/best-lawyers-badge.svg", alt: "Best Lawyers in America" },
+              { src: "/images/badges/chambers-usa-badge.svg", alt: "Chambers USA" },
+              { src: "/images/badges/best-law-firms-badge.svg", alt: "U.S. News Best Law Firms" },
+            ].map((badge) => (
+              <Image
+                key={badge.alt}
+                src={badge.src}
+                alt={badge.alt}
+                width={200}
+                height={120}
+                className="mx-[24px] h-[80px] w-auto shrink-0 object-contain sm:mx-[40px] sm:h-[120px]"
+              />
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {[
+              { src: "/images/badges/super-lawyers-badge.svg", alt: "Super Lawyers" },
+              { src: "/images/badges/best-lawyers-badge.svg", alt: "Best Lawyers in America" },
+              { src: "/images/badges/chambers-usa-badge.svg", alt: "Chambers USA" },
+              { src: "/images/badges/best-law-firms-badge.svg", alt: "U.S. News Best Law Firms" },
+            ].map((badge) => (
+              <Image
+                key={`dup-${badge.alt}`}
+                src={badge.src}
+                alt={badge.alt}
+                width={200}
+                height={120}
+                className="mx-[24px] h-[80px] w-auto shrink-0 object-contain sm:mx-[40px] sm:h-[120px]"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -318,55 +317,6 @@ export default function HomePage() {
       </section>
 
       {/* ============================================================ */}
-      {/* FOUNDING PARTNER QUOTE                                       */}
-      {/* ============================================================ */}
-      <section className="bg-white py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <FadeIn>
-            <div className="grid items-center gap-12 lg:grid-cols-12">
-              <div className="lg:col-span-4">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/mike_nixon.avif"
-                    alt="Mike Nixon, Founding Partner of Nixon Jach Hubbard, Dallas construction law attorney"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-              </div>
-              <div className="lg:col-span-8">
-                <div className="divider-accent mb-8" />
-                <blockquote className="font-heading text-xl font-bold leading-snug tracking-tight text-navy-900 sm:text-2xl lg:text-3xl">
-                  &ldquo;We built this firm on one principle: understand the
-                  client&apos;s business as well as we understand the law.
-                  A contractor doesn&apos;t need a lawyer who just reads the
-                  contract — they need one who has walked the job site,
-                  reviewed the schedule, and knows what a delay really
-                  costs.&rdquo;
-                </blockquote>
-                <div className="mt-6">
-                  <p className="text-sm font-semibold text-navy-900">
-                    Mike Nixon
-                  </p>
-                  <p className="mt-1 text-xs text-charcoal-500">
-                    Founding Partner &middot; 30+ Years of Construction Law
-                    Experience
-                  </p>
-                  <Link
-                    href="/attorneys/michael-nixon"
-                    className="mt-3 inline-block text-sm font-semibold text-gold-500 transition-colors hover:text-gold-600"
-                  >
-                    Read Mike&apos;s full bio &rarr;
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
       {/* DIFFERENTIATORS                                               */}
       {/* ============================================================ */}
       <section className="bg-navy-950 py-24 lg:py-32">
@@ -408,53 +358,6 @@ export default function HomePage() {
               </FadeIn>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* TRUSTED BY                                                    */}
-      {/* ============================================================ */}
-      <section className="bg-charcoal-50 py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6 text-center">
-          <FadeIn>
-            <h2 className="font-heading text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
-              Trusted by contractors, developers, and property owners across the DFW metroplex
-            </h2>
-          </FadeIn>
-
-          <FadeIn delay={0.1}>
-            <div className="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
-              {["Super Lawyers", "Best Lawyers in America", "Chambers USA"].map((label) => (
-                <div key={label} className="flex flex-col items-center gap-2 text-center">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-charcoal-200 bg-white">
-                    <svg className="h-5 w-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-xs font-medium tracking-wide text-charcoal-500 uppercase">
-                    {label}
-                  </span>
-                </div>
-              ))}
-              {[
-                { label: "Super Lawyers", sub: "Mike Nixon, 2008\u20132024" },
-                { label: "Best Lawyers", sub: "Mike Nixon, 2019\u20132024" },
-                { label: "Chambers USA", sub: "Mike Nixon, 2020\u20132024" },
-              ].map((badge) => (
-                <div key={badge.sub} className="flex flex-col items-center gap-2 text-center">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-200 bg-gold-100">
-                    <svg className="h-5 w-5 text-gold-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-xs font-medium tracking-wide text-charcoal-500 uppercase">
-                    {badge.label}
-                  </span>
-                  <span className="text-[10px] text-charcoal-400">{badge.sub}</span>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
         </div>
       </section>
 

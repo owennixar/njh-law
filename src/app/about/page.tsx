@@ -50,46 +50,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* FOUNDING PARTNER QUOTE */}
-      <section className="bg-charcoal-50 py-24 lg:py-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <FadeIn>
-            <div className="grid items-center gap-12 lg:grid-cols-12">
-              <div className="lg:col-span-4">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
-                  <Image
-                    src="/images/mike_nixon.avif"
-                    alt="Mike Nixon, Founding Partner of Nixon Jach Hubbard"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-              </div>
-              <div className="lg:col-span-8">
-                <div className="divider-accent mb-8" />
-                <blockquote className="font-heading text-2xl font-bold leading-snug tracking-tight text-navy-900 sm:text-3xl">
-                  &ldquo;The construction industry runs on relationships and
-                  trust. We earn both by knowing the business as well as we
-                  know the law. When a GC calls about a $5M lien dispute,
-                  we do not start by asking what a change order is — we start
-                  by asking which trade is holding up the schedule.&rdquo;
-                </blockquote>
-                <div className="mt-8">
-                  <p className="text-base font-semibold text-navy-900">
-                    Mike Nixon
-                  </p>
-                  <p className="mt-1 text-sm text-charcoal-500">
-                    Founding Partner &middot; Board Certified, Civil Trial Law
-                    &middot; Super Lawyers 2008&ndash;2024
-                  </p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       {/* OUR STORY */}
       <section className="bg-white py-28 lg:py-36">
         <div className="mx-auto max-w-7xl px-6">

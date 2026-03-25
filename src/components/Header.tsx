@@ -87,12 +87,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-5 lg:flex xl:gap-7">
+        <nav className="hidden items-center gap-4 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="rounded px-2 py-1.5 text-sm font-medium text-charcoal-600 transition-colors hover:text-navy-900"
+              className="whitespace-nowrap rounded px-2 py-1.5 text-[13px] font-medium text-charcoal-600 transition-colors hover:text-navy-900"
             >
               {link.label}
             </Link>
@@ -106,9 +106,9 @@ export default function Header() {
                 setPracticeOpen(!practiceOpen);
                 setIndustryOpen(false);
               }}
-              className="flex items-center rounded px-2 py-1.5 text-sm font-medium text-charcoal-600 transition-colors hover:text-navy-900"
+              className="flex items-center whitespace-nowrap rounded px-2 py-1.5 text-[13px] font-medium text-charcoal-600 transition-colors hover:text-navy-900"
             >
-              Practice Areas
+              Practice
               {chevronDown}
             </button>
             <AnimatePresence>
@@ -143,7 +143,7 @@ export default function Header() {
                 setIndustryOpen(!industryOpen);
                 setPracticeOpen(false);
               }}
-              className="flex items-center rounded px-2 py-1.5 text-sm font-medium text-charcoal-600 transition-colors hover:text-navy-900"
+              className="flex items-center whitespace-nowrap rounded px-2 py-1.5 text-[13px] font-medium text-charcoal-600 transition-colors hover:text-navy-900"
             >
               Industries
               {chevronDown}
@@ -174,39 +174,31 @@ export default function Header() {
 
           <Link
             href="/clients"
-            className="rounded px-2 py-1.5 text-sm font-medium text-charcoal-600 transition-colors hover:text-navy-900"
+            className="whitespace-nowrap rounded px-2 py-1.5 text-[13px] font-medium text-charcoal-600 transition-colors hover:text-navy-900"
           >
             Clients
           </Link>
           <Link
             href="/insights"
-            className="rounded px-2 py-1.5 text-sm font-medium text-charcoal-600 transition-colors hover:text-navy-900"
+            className="whitespace-nowrap rounded px-2 py-1.5 text-[13px] font-medium text-charcoal-600 transition-colors hover:text-navy-900"
           >
             Insights
           </Link>
           <Link
             href="/contact"
-            className="rounded px-2 py-1.5 text-sm font-medium text-charcoal-600 transition-colors hover:text-navy-900"
+            className="whitespace-nowrap rounded px-2 py-1.5 text-[13px] font-medium text-charcoal-600 transition-colors hover:text-navy-900"
           >
             Contact
           </Link>
-        </nav>
 
-        {/* Right side: phone + CTA (desktop) */}
-        <div className="hidden items-center gap-4 lg:flex xl:gap-6">
-          <a
-            href="tel:9725037000"
-            className="rounded px-2 py-1.5 text-sm font-medium text-charcoal-600 transition-colors hover:text-navy-900"
-          >
-            (972) 503-7000
-          </a>
+          {/* CTA button inline with nav */}
           <Link
             href="/contact"
-            className="rounded bg-gold-400 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
+            className="whitespace-nowrap rounded bg-gold-400 px-5 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-gold-300"
           >
-            Schedule a Consultation
+            Consult
           </Link>
-        </div>
+        </nav>
 
         {/* Mobile: phone icon + hamburger */}
         <div className="flex items-center gap-2 lg:hidden">
@@ -345,7 +337,7 @@ export default function Header() {
                 className="mt-2 rounded-lg bg-gold-400 px-5 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-gold-300"
                 onClick={() => setMobileOpen(false)}
               >
-                Schedule a Consultation
+                Consult
               </Link>
             </div>
           </motion.nav>

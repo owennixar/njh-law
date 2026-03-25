@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="120" viewBox="0 0 200 120">
+  <rect width="200" height="120" fill="#f9fafb" rx="8"/>
+  <rect x="4" y="4" width="192" height="112" fill="none" stroke="#d1d5db" stroke-width="1" rx="6"/>
+  <text x="100" y="55" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#1B3A6B">Best Lawyers</text>
+  <text x="100" y="75" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Badge Placeholder</text>
+</svg>
