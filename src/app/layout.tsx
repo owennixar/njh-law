@@ -20,14 +20,21 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Dallas Business Law Firm | Nixon Jach Hubbard | Construction & Real Estate Attorneys",
+  title: "Dallas Business Law Firm | Nixon Jach Hubbard",
   description:
-    "Dallas business law firm with 30+ years in construction law, commercial real estate, business litigation, and corporate transactions. Recognized by Chambers USA and Best Lawyers.",
+    "Dallas business law firm handling construction law, real estate, litigation & corporate transactions. Chambers USA, Super Lawyers, Best Lawyers recognized.",
   metadataBase: new URL("https://njh-law.com"),
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
     siteName: "Nixon Jach Hubbard",
+    title: "Dallas Business Law Firm | Nixon Jach Hubbard",
+    description:
+      "Construction law, commercial real estate, business litigation, and corporate transactions in Dallas, Texas.",
+  },
+  twitter: {
+    card: "summary",
     title: "Dallas Business Law Firm | Nixon Jach Hubbard",
     description:
       "Construction law, commercial real estate, business litigation, and corporate transactions in Dallas, Texas.",

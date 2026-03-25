@@ -63,6 +63,21 @@ const faqSchema = {
   })),
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Commercial Real Estate Law",
+  description:
+    "Commercial real estate legal services including acquisitions, dispositions, leasing, development, and financing for developers, investors, and landlords in Dallas, Texas.",
+  provider: {
+    "@type": "LegalService",
+    name: "Nixon Jach Hubbard",
+    url: "https://njh-law.com",
+  },
+  areaServed: { "@type": "State", name: "Texas" },
+  url: "https://njh-law.com/practice-areas/commercial-real-estate",
+};
+
 export default function CommercialRealEstatePage() {
   return (
     <>
@@ -70,6 +85,12 @@ export default function CommercialRealEstatePage() {
         id="faq-schema-cre"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="service-schema-cre"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         strategy="afterInteractive"
       />
 

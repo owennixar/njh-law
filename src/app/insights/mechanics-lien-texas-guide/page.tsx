@@ -39,6 +39,14 @@ const faqData = [
     q: "How much does it cost to file a mechanic\u2019s lien in Texas?",
     a: "County clerk filing fees typically range from $25 to $50 depending on the county. Attorney fees for lien preparation and filing range from $500 to $2,000 depending on complexity. The cost of not filing \u2014 losing your only secured claim against the property \u2014 is almost always higher.",
   },
+  {
+    q: "How long do I have to file a mechanic\u2019s lien in Texas?",
+    a: "Under Texas Property Code \u00a753.052, the deadline is the 15th day of the fourth month after the month you last provided labor or materials. If your last day of work was June 20, the lien affidavit must be filed by October 15. Subcontractors and suppliers must also send preliminary notice by the 15th of the second month after first providing work. Missing either deadline permanently destroys your lien rights.",
+  },
+  {
+    q: "Can I file a mechanic\u2019s lien on a residential homestead in Texas?",
+    a: "Yes, but the requirements are stricter. Under Texas Property Code \u00a753.254, an original contractor must have a written contract with the homeowner, or provide a disclosure statement before work begins, to preserve lien rights on a homestead. Subcontractors and suppliers can lien a homestead but must comply with the same notice deadlines as commercial projects. Texas courts closely scrutinize homestead liens because of the strong constitutional protections the Texas Constitution gives to homestead property.",
+  },
 ];
 
 const faqSchema = {

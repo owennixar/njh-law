@@ -63,6 +63,21 @@ const faqSchema = {
   })),
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Business Formation & Corporate Transactions",
+  description:
+    "Corporate transaction services including LLC formation, S-Corp elections, joint ventures, shareholder agreements, and contract drafting in Dallas, Texas.",
+  provider: {
+    "@type": "LegalService",
+    name: "Nixon Jach Hubbard",
+    url: "https://njh-law.com",
+  },
+  areaServed: { "@type": "State", name: "Texas" },
+  url: "https://njh-law.com/practice-areas/corporate-transactions",
+};
+
 export default function CorporateTransactionsPage() {
   return (
     <>
@@ -70,6 +85,12 @@ export default function CorporateTransactionsPage() {
         id="faq-schema-ct"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="service-schema-ct"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         strategy="afterInteractive"
       />
 

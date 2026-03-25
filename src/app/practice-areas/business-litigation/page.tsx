@@ -63,6 +63,21 @@ const faqSchema = {
   })),
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Business Litigation",
+  description:
+    "Business litigation services including breach of contract, partner disputes, fiduciary claims, shareholder conflicts, and injunctions in Dallas, Texas.",
+  provider: {
+    "@type": "LegalService",
+    name: "Nixon Jach Hubbard",
+    url: "https://njh-law.com",
+  },
+  areaServed: { "@type": "State", name: "Texas" },
+  url: "https://njh-law.com/practice-areas/business-litigation",
+};
+
 export default function BusinessLitigationPage() {
   return (
     <>
@@ -72,63 +87,42 @@ export default function BusinessLitigationPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         strategy="afterInteractive"
       />
+      <Script
+        id="service-schema-bl"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+        strategy="afterInteractive"
+      />
 
       {/* HERO */}
       <section className="bg-navy-950 py-28 lg:py-40">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-12 lg:grid-cols-12">
-            <FadeIn className="lg:col-span-8">
-              <div className="divider-accent mb-8" />
-              <h1 className="font-heading text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-                Business Litigation Attorneys in Dallas, Texas
-              </h1>
-
-              <div className="mt-10 rounded-lg border border-navy-800 bg-navy-900 p-10">
-                <p className="text-sm leading-relaxed text-charcoal-300">
-                  <span className="font-semibold text-white">
-                    Tuesday, 9:14 AM.
-                  </span>{" "}
-                  Your CFO finds $340,000 in unauthorized transfers to an LLC
-                  your business partner registered last month. By 10 AM, your
-                  bookkeeper confirms three months of diverted client payments.
-                  The partner is not returning calls.
-                </p>
-                <p className="mt-5 text-sm leading-relaxed text-charcoal-300">
-                  By noon, we file a temporary restraining order in Dallas
-                  County district court under CPRC &sect;65.011. The
-                  partner&apos;s accounts are frozen. By end of week, we obtain
-                  a temporary injunction and initiate a forensic accounting hold.
-                  We file a breach of fiduciary duty claim under the Texas
-                  Business Organizations Code. The money stops moving. The case
-                  starts.
-                </p>
-                <p className="mt-5 text-sm leading-relaxed text-charcoal-400">
-                  That is what a business litigation attorney Dallas companies
-                  call when the situation is urgent — not next week, not after
-                  three consultations. Today.
-                </p>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.15} className="flex flex-col justify-end lg:col-span-4">
-              <p className="text-sm leading-relaxed text-charcoal-400">
-                Business litigation covers the disputes that arise between
-                companies, partners, shareholders, and counterparties when
-                commercial relationships break down. In Texas, these claims
-                are governed by the Texas Civil Practice &amp; Remedies Code,
-                the Texas Business Organizations Code, and federal rules in
-                the U.S. District Court for the Northern District of Texas.
-              </p>
-              <div className="mt-8">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded bg-gold-400 px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
-                >
-                  Schedule a Consultation
-                </Link>
-              </div>
-            </FadeIn>
-          </div>
+          <FadeIn>
+            <div className="divider-accent mb-8" />
+            <h1 className="max-w-3xl font-heading text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+              Business Litigation Attorneys in Dallas, Texas
+            </h1>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-charcoal-300">
+              Business litigation covers the disputes that arise between
+              companies, partners, shareholders, and counterparties when
+              commercial relationships break down. In Texas, these claims are
+              governed by the Texas Civil Practice &amp; Remedies Code, the
+              Texas Business Organizations Code, and federal rules in the
+              U.S. District Court for the Northern District of Texas. We
+              represent Dallas businesses on both sides of commercial
+              disputes — from emergency injunctions to trial and appeal.
+            </p>
+            <div className="mt-10">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded bg-gold-400 px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-gold-300"
+              >
+                Schedule a Consultation
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -150,7 +144,7 @@ export default function BusinessLitigationPage() {
             </p>
           </FadeIn>
 
-          <div className="mt-20 columns-1 gap-6 space-y-6 md:columns-2 lg:columns-3">
+          <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               { title: "Breach of contract", body: "Contract disputes are the core of commercial litigation. We handle claims from vendor agreements, service contracts, purchase orders, licensing deals, and joint ventures. CPRC \u00a738.001 allows the prevailing party to recover attorney\u2019s fees on most contract claims \u2014 a factor that shapes strategy from day one." },
               { title: "Employment and non-compete disputes", body: "When a key employee leaves with clients or trade secrets, the damage is immediate. We enforce and defend non-compete agreements, non-solicitation clauses, and confidentiality provisions under Texas Business & Commerce Code \u00a715.50. Emergency TROs under CPRC \u00a765.011 can stop the harm before it becomes irreversible." },
@@ -158,12 +152,12 @@ export default function BusinessLitigationPage() {
               { title: "Business torts", body: "Tortious interference, fraud, and conspiracy claims arise when a third party disrupts a business relationship or a counterparty uses deception. We prosecute and defend claims for tortious interference with existing contracts, statutory fraud under Texas Business & Commerce Code \u00a727.01, and civil conspiracy." },
               { title: "Shareholder and partner disputes", body: "Ownership disputes can paralyze a company. We handle shareholder oppression claims, management authority disputes, contested distributions, and deadlocked boards. Under Texas Business Organizations Code \u00a711.314, courts can appoint a receiver and order judicial dissolution when governance has failed." },
               { title: "Bankruptcy litigation and claims", body: "When a debtor or counterparty files for bankruptcy, the automatic stay halts all existing claims. We represent creditors in adversary proceedings, preference actions, and proof-of-claim disputes in the U.S. Bankruptcy Court for the Northern District of Texas." },
-              { title: "Business dissolution", body: "Voluntary winding down is straightforward. Contested dissolution is not. We handle judicial dissolution petitions under Texas BOC \u00a711.314, wind-up disputes, asset distribution disagreements, and post-dissolution claims." },
-              { title: "Collections and judgment enforcement", body: "Winning a judgment means nothing without enforcement. We pursue post-judgment discovery, writs of execution, turnover orders under CPRC \u00a731.002, and garnishment proceedings." },
-              { title: "Injunctions and commercial restraining orders", body: "Some disputes cannot wait for trial. We file TROs and temporary injunctions under CPRC \u00a765.011, often obtaining hearings within 24 to 48 hours in Dallas County district courts." },
+              { title: "Business dissolution", body: "Voluntary winding down is straightforward. Contested dissolution is not. We handle judicial dissolution petitions under Texas BOC \u00a711.314, wind-up disputes, asset distribution disagreements, and post-dissolution claims. The process typically begins with a petition to the district court showing that the entity\u2019s management is deadlocked, that those in control are acting illegally or fraudulently, or that corporate assets are being wasted. Under BOC \u00a711.404, the court can order a full accounting and appoint a receiver to manage the wind-up." },
+              { title: "Collections and judgment enforcement", body: "Winning a judgment means nothing without enforcement. We pursue post-judgment discovery, writs of execution, turnover orders under CPRC \u00a731.002, and garnishment proceedings. Texas law allows turnover receivers to seize nonexempt assets that cannot be attached by ordinary process. We also domesticate out-of-state judgments under the Uniform Enforcement of Foreign Judgments Act, CPRC Chapter 35, and pursue fraudulent transfer claims under the Texas Uniform Voidable Transactions Act, Business & Commerce Code Chapter 24." },
+              { title: "Injunctions and commercial restraining orders", body: "Some disputes cannot wait for trial. We file TROs and temporary injunctions under CPRC \u00a765.011, often obtaining hearings within 24 to 48 hours in Dallas County district courts. A TRO applicant must show a probable right to recovery and a probable, imminent, and irreparable injury. Common scenarios include asset dissipation by a fiduciary, trade secret misappropriation after an employee departure, and violations of restrictive covenants. We also defend businesses served with TROs and prepare for the temporary injunction hearing that follows within 14 days." },
             ].map((item, i) => (
               <FadeIn key={item.title} delay={(i % 3) * 0.05}>
-                <div className="card-hover break-inside-avoid rounded-lg border border-charcoal-200 bg-charcoal-50 p-8">
+                <div className="card-hover flex h-full flex-col rounded-lg border border-charcoal-200 bg-charcoal-50 p-8">
                   <h3 className="font-heading text-base font-bold text-navy-900">{item.title}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-charcoal-600">{item.body}</p>
                 </div>

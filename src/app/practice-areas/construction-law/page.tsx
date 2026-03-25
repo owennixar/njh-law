@@ -77,6 +77,21 @@ const faqSchema = {
   })),
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Construction Law",
+  description:
+    "Construction law services including mechanic\u2019s lien claims, contract disputes, delay claims, and project litigation for contractors, owners, and suppliers in Dallas, Texas.",
+  provider: {
+    "@type": "LegalService",
+    name: "Nixon Jach Hubbard",
+    url: "https://njh-law.com",
+  },
+  areaServed: { "@type": "State", name: "Texas" },
+  url: "https://njh-law.com/practice-areas/construction-law",
+};
+
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
@@ -87,6 +102,12 @@ export default function ConstructionLawPage() {
         id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="service-schema-cl"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         strategy="afterInteractive"
       />
 

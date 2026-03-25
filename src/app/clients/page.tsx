@@ -158,6 +158,30 @@ export default function ClientsPage() {
         </div>
       </section>
 
+      {/* PRACTICE AREA LINKS */}
+      <section className="border-t border-charcoal-200 bg-charcoal-50 py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <FadeIn>
+            <div className="grid gap-6 md:grid-cols-4">
+              {[
+                { href: "/practice-areas/construction-law", label: "Construction Law" },
+                { href: "/practice-areas/commercial-real-estate", label: "Commercial Real Estate" },
+                { href: "/practice-areas/business-litigation", label: "Business Litigation" },
+                { href: "/practice-areas/corporate-transactions", label: "Corporate Transactions" },
+              ].map((area) => (
+                <Link
+                  key={area.href}
+                  href={area.href}
+                  className="rounded-lg border border-charcoal-200 bg-white p-6 text-center text-sm font-semibold text-navy-900 transition-colors hover:border-navy-600 hover:text-gold-600"
+                >
+                  {area.label} &rarr;
+                </Link>
+              ))}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-navy-950 py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-6">

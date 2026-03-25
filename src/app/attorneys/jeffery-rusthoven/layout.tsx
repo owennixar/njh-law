@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Jeffery H. Rusthoven | Nixon Jach Hubbard | Dallas Construction Attorney",
+  title: "Jeff Rusthoven | Nixon Jach Hubbard | Dallas",
   description:
-    "Jeff Rusthoven is a partner at Nixon Jach Hubbard, board certified in construction law, representing clients in complex construction and business litigation disputes across Texas.",
+    "Jeff Rusthoven is a board certified construction law attorney at Nixon Jach Hubbard in Dallas. Two decades of litigation experience across Texas courts.",
+  alternates: { canonical: "/attorneys/jeffery-rusthoven" },
   openGraph: {
+    title: "Jeffery H. Rusthoven | Dallas Construction Attorney",
+    description:
+      "Partner at Nixon Jach Hubbard. Board certified in construction law with two decades of litigation experience in Dallas, Texas.",
+  },
+  twitter: {
+    card: "summary",
     title: "Jeffery H. Rusthoven | Dallas Construction Attorney",
     description:
       "Partner at Nixon Jach Hubbard. Board certified in construction law with two decades of litigation experience in Dallas, Texas.",

@@ -1,10 +1,17 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Attorneys | Nixon Jach Hubbard | Dallas Business Law Attorneys",
+  title: "Attorneys | Nixon Jach Hubbard | Dallas",
   description:
-    "Meet the five attorneys at Nixon Jach Hubbard \u2014 Dallas construction, real estate, litigation & corporate lawyers serving businesses across Texas.",
+    "Meet the five Dallas attorneys at Nixon Jach Hubbard — construction, real estate, litigation & corporate lawyers serving businesses across Texas.",
+  alternates: { canonical: "/attorneys" },
   openGraph: {
+    title: "Our Attorneys | Nixon Jach Hubbard",
+    description:
+      "Five Dallas attorneys focused on construction law, commercial real estate, business litigation, and corporate transactions.",
+  },
+  twitter: {
+    card: "summary",
     title: "Our Attorneys | Nixon Jach Hubbard",
     description:
       "Five Dallas attorneys focused on construction law, commercial real estate, business litigation, and corporate transactions.",

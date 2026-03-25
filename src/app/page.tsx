@@ -139,7 +139,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-navy-950 py-20 sm:py-28 lg:py-36">
         <Image
           src="/images/dallas-skyline.jpg"
-          alt=""
+          alt="Dallas commercial skyline representing the construction and business law practice of Nixon Jach Hubbard"
           fill
           className="object-cover object-center opacity-30"
           priority

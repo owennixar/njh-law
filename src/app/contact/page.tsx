@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import Script from "next/script";
 
@@ -381,13 +382,14 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-navy-900">
-                  What to Expect
+                  Practice Areas
                 </h3>
-                <p className="mt-2 text-sm text-charcoal-600">
-                  Your inquiry goes directly to an attorney. Initial
-                  consultations are confidential. We respond within one
-                  business day — usually the same day.
-                </p>
+                <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                  <Link href="/practice-areas/construction-law" className="text-gold-600 hover:text-gold-500">Construction Law</Link>
+                  <Link href="/practice-areas/commercial-real-estate" className="text-gold-600 hover:text-gold-500">Commercial Real Estate</Link>
+                  <Link href="/practice-areas/business-litigation" className="text-gold-600 hover:text-gold-500">Business Litigation</Link>
+                  <Link href="/practice-areas/corporate-transactions" className="text-gold-600 hover:text-gold-500">Corporate Transactions</Link>
+                </div>
               </div>
             </div>
           </FadeIn>
