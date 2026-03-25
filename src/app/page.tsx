@@ -137,27 +137,14 @@ export default function HomePage() {
       {/* HERO — clean, confident, understated                         */}
       {/* ============================================================ */}
       <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-navy-950">
-        {/* Video background — desktop only */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="pointer-events-none absolute inset-0 hidden h-full w-full object-cover md:block"
-          aria-hidden="true"
-        >
-          <source src="/videos/dallas-skyline.mp4" type="video/mp4" />
-        </video>
-
-        {/* Static fallback — mobile (saves bandwidth) */}
+        {/* Daytime Dallas skyline background */}
         <Image
-          src="/images/dallas-skyline.jpg"
-          alt="Dallas commercial skyline representing the construction and business law practice of Nixon Jach Hubbard"
+          src="/images/dallas-skyline-day.jpg"
+          alt="Daytime Dallas skyline representing the construction and business law practice of Nixon Jach Hubbard"
           fill
-          className="object-cover object-center md:hidden"
+          className="object-cover object-center"
           priority
-          quality={80}
+          quality={85}
         />
 
         {/* Dark gradient overlay — left-to-right */}
@@ -213,24 +200,24 @@ export default function HomePage() {
       {/* ============================================================ */}
       <section className="border-b border-charcoal-100 bg-white py-8 lg:py-10">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-start lg:gap-10">
-            <p className="shrink-0 font-heading text-base font-bold text-navy-900 lg:text-lg">
+          <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-center lg:gap-4">
+            <p className="shrink-0 font-heading text-sm font-bold text-navy-900 lg:text-base">
               Our attorneys are recognized&nbsp;by:
             </p>
             <div
-              className="flex flex-wrap items-center justify-center gap-3 lg:flex-1 lg:justify-start"
+              className="flex flex-nowrap items-center justify-center gap-2 lg:flex-1 lg:justify-start"
               aria-label="Attorney recognition and awards"
             >
               {[
-                "Texas Super Lawyers (2008–2024)",
-                "Best Lawyers in America (2019–2024)",
-                "Chambers USA Construction (2020–2024)",
-                "Martindale-Hubbell AV Preeminent",
-                "Best Law Firms – Tier 1 Dallas Construction",
+                "Super Lawyers",
+                "Best Lawyers",
+                "Chambers USA",
+                "AV Preeminent",
+                "Best Law Firms",
               ].map((award) => (
                 <span
                   key={award}
-                  className="inline-block rounded-full border border-charcoal-200 px-4 py-1.5 text-sm font-medium text-navy-900"
+                  className="inline-block whitespace-nowrap rounded-full border border-charcoal-200 px-3 py-1 text-xs font-medium text-navy-900"
                 >
                   {award}
                 </span>
