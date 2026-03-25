@@ -198,10 +198,13 @@ export default function HomePage() {
       {/* ============================================================ */}
       {/* RECOGNITION — clean text pills                               */}
       {/* ============================================================ */}
-      <section className="border-b border-charcoal-100 bg-white py-10 lg:py-12">
+      <section className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-6">
+          <p className="mb-6 text-center font-heading text-[18px]">
+            Our attorneys are recognized by:
+          </p>
           <div
-            className="flex flex-nowrap items-center justify-center gap-3"
+            className="flex flex-col items-center gap-3 md:flex-row md:justify-between md:gap-0"
             aria-label="Attorney recognition and awards"
           >
             {[
@@ -213,7 +216,7 @@ export default function HomePage() {
             ].map((award) => (
               <span
                 key={award}
-                className="whitespace-nowrap rounded-full border border-navy-900 px-5 py-4 text-[13px] font-medium text-navy-900"
+                className="whitespace-nowrap rounded-full border border-navy-900 bg-white px-9 py-3.5 text-[15px] text-navy-900"
               >
                 {award}
               </span>
